@@ -1,6 +1,10 @@
 {
   "version": 2,
-  "runtime": "edge",
+  "functions": {
+    "api/server.ts": {
+      "runtime": "edge"
+    }
+  },
   "rewrites": [
     { "source": "/assets/(.*)", "destination": "/client/assets/$1" },
     { "source": "/robots.txt", "destination": "/client/robots.txt" },
