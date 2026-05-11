@@ -76,34 +76,52 @@ export function Services() {
           </h2>
         </motion.div>
 
-        {/* Scrollable tabs on mobile */}
-        <div className="mt-10 sm:mt-16 -mx-4 px-4 sm:mx-0 sm:px-0 overflow-x-auto scrollbar-none">
-          <div className="flex items-center justify-start sm:justify-center gap-x-6 sm:gap-x-10 gap-y-4 min-w-max sm:min-w-0 sm:flex-wrap">
-            {tabs.map((t) => {
-              const isActive = active === t;
-              return (
-                <button
-                  key={t}
-                  onClick={() => setActive(t)}
-                  className="relative pb-2 transition-colors whitespace-nowrap min-h-[44px] flex items-center"
-                  style={{
-                    fontSize: "12px",
-                    letterSpacing: "0.2em",
-                    textTransform: "uppercase",
-                    color: isActive ? "var(--color-emerald-glow)" : "rgba(255,255,255,0.4)",
-                  }}
-                >
-                  {t}
-                  {isActive && (
-                    <motion.span
-                      layoutId="tab-underline"
-                      className="absolute left-0 right-0 -bottom-px h-px"
-                      style={{ background: "var(--color-emerald-glow)" }}
-                    />
-                  )}
-                </button>
-              );
-            })}
+        {/* Enhanced Tab Switcher */}
+        <div className="mt-12 sm:mt-20 flex justify-center">
+          <div className="inline-flex items-center p-1.5 sm:p-2 glass-dark rounded-full overflow-x-auto scrollbar-none max-w-full">
+            <div className="flex items-center gap-1 sm:gap-2 min-w-max">
+              {tabs.map((t, i) => {
+                const isActive = active === t;
+                return (
+                  <button
+                    key={t}
+                    onClick={() => setActive(t)}
+                    className="relative px-5 sm:px-8 py-2.5 sm:py-3.5 rounded-full transition-all duration-300 flex items-center gap-3 group outline-none"
+                  >
+                    {isActive && (
+                      <motion.div
+                        layoutId="active-pill"
+                        className="absolute inset-0 bg-white/10 rounded-full"
+                        transition={{ type: "spring", bounce: 0.15, duration: 0.6 }}
+                        style={{ border: "1px solid rgba(255,255,255,0.1)" }}
+                      />
+                    )}
+                    
+                    <span 
+                      className="relative z-10 font-mono text-[9px] sm:text-[10px] transition-colors"
+                      style={{ 
+                        opacity: isActive ? 1 : 0.4,
+                        color: isActive ? "var(--color-emerald-glow)" : "white" 
+                      }}
+                    >
+                      0{i + 1}
+                    </span>
+                    
+                    <span
+                      className="relative z-10 whitespace-nowrap font-medium transition-colors"
+                      style={{
+                        fontSize: "11px",
+                        letterSpacing: "0.15em",
+                        textTransform: "uppercase",
+                        color: isActive ? "white" : "rgba(255,255,255,0.5)",
+                      }}
+                    >
+                      {t}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
 

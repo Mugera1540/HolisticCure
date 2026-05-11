@@ -17,35 +17,24 @@ const jsonLd = {
   name: "Dr. Anisa's Holistic Cure",
   alternateName: "Holistic Cure Homeopathy Clinic",
   description:
-    "Premium homeopathy clinic providing natural, side-effect-free treatments for chronic diseases, skin disorders, respiratory issues, women's wellness, and mental health.",
+    "Premium homeopathy clinic providing natural, side-effect-free treatments for chronic diseases, skin disorders, respiratory issues, women's wellness, and mental health in Mumbai and Indore.",
   url: "https://holisticcure.in",
   telephone: "+919324625457",
   email: "info@holisticcure.in",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Manju Nursing Home, Shubh Sadan 18B, Sindhi Society",
-    addressLocality: "Chembur",
-    addressRegion: "Maharashtra",
-    postalCode: "400071",
-    addressCountry: "IN",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 19.0522,
-    longitude: 72.8994,
-  },
-  openingHoursSpecification: [
+  address: [
     {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "11:00",
-      closes: "13:00",
+      "@type": "PostalAddress",
+      streetAddress: "Ground floor, Manju Nursing Home, Sindhi Society, Chembur",
+      addressLocality: "Mumbai",
+      postalCode: "400071",
+      addressCountry: "IN",
     },
     {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "18:00",
-      closes: "21:00",
+      "@type": "PostalAddress",
+      streetAddress: "LG -04, Om Gurudev Complex, Scheme no 54",
+      addressLocality: "Indore",
+      addressRegion: "MP",
+      addressCountry: "IN",
     },
   ],
   medicalSpecialty: "Homeopathy",
@@ -56,7 +45,6 @@ const jsonLd = {
     reviewCount: "120",
     bestRating: "5",
   },
-  hasMap: "https://maps.google.com/?q=Manju+Nursing+Home+Chembur+Mumbai",
 };
 
 export const Route = createFileRoute("/")({
@@ -64,17 +52,17 @@ export const Route = createFileRoute("/")({
     meta: [
       {
         title:
-          "Dr. Anisa's Holistic Cure — Premium Homeopathy Clinic in Chembur, Mumbai",
+          "Dr. Anisa's Holistic Cure — Premium Homeopathy Clinic in Mumbai & Indore",
       },
       {
         name: "description",
         content:
-          "Experience world-class homeopathic healing at Dr. Anisa's Holistic Cure clinic in Chembur, Mumbai. Natural, side-effect-free treatments for chronic diseases, skin disorders, respiratory issues, women's wellness, and mental health. Book your consultation today.",
+          "Experience world-class homeopathic healing at Dr. Anisa's Holistic Cure clinics in Mumbai and Indore. Natural, side-effect-free treatments for chronic diseases, skin disorders, respiratory issues, women's wellness, and mental health.",
       },
       {
         name: "keywords",
         content:
-          "homeopathy, homeopathy clinic Mumbai, Dr Anisa, Holistic Cure, Chembur homeopathy, natural healing, chronic disease treatment, skin disorder homeopathy, women wellness homeopathy",
+          "homeopathy, homeopathy clinic Mumbai, homeopathy clinic Indore, Dr Anisa, Holistic Cure, Chembur homeopathy, natural healing, chronic disease treatment, skin disorder homeopathy, women wellness homeopathy",
       },
       { name: "theme-color", content: "#040f0c" },
       {
@@ -84,7 +72,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Natural healing. Precise science. Lasting wellness. Experience holistic homeopathic care in Chembur, Mumbai.",
+          "Natural healing. Precise science. Lasting wellness. Experience holistic homeopathic care in Mumbai and Indore.",
       },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_IN" },
@@ -96,7 +84,7 @@ export const Route = createFileRoute("/")({
       {
         name: "twitter:description",
         content:
-          "Natural healing. Precise science. Lasting wellness. Book a consultation in Chembur, Mumbai.",
+          "Natural healing. Precise science. Lasting wellness. Book a consultation in Mumbai or Indore.",
       },
     ],
     links: [

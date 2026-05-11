@@ -72,19 +72,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
-      { title: "Dr. Anisa's Holistic Cure — Premium Homeopathy Clinic in Mumbai" },
-      { name: "description", content: "Experience world-class homeopathic healing at Dr. Anisa's Holistic Cure clinic in Chembur, Mumbai. Natural, side-effect-free treatments for chronic diseases, skin disorders, respiratory issues, women's wellness, and mental health." },
+      { title: "Dr. Anisa's Holistic Cure — Premium Homeopathy Clinic in Mumbai & Indore" },
+      { name: "description", content: "Experience world-class homeopathic healing at Dr. Anisa's Holistic Cure clinics in Mumbai and Indore. Natural, side-effect-free treatments for chronic diseases, skin disorders, respiratory issues, women's wellness, and mental health." },
       { name: "author", content: "Dr. Anisa Shaikh" },
       { name: "robots", content: "index, follow" },
       { name: "theme-color", content: "#040f0c" },
       { property: "og:title", content: "Dr. Anisa's Holistic Cure — Premium Homeopathy Clinic" },
-      { property: "og:description", content: "Natural healing. Precise science. Lasting wellness. Experience holistic homeopathic care in Chembur, Mumbai." },
+      { property: "og:description", content: "Natural healing. Precise science. Lasting wellness. Experience holistic homeopathic care in Mumbai and Indore." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://holisticcure.in" },
       { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Dr. Anisa's Holistic Cure — Premium Homeopathy" },
-      { name: "twitter:description", content: "Natural healing. Precise science. Lasting wellness. Book a consultation in Chembur, Mumbai." },
+      { name: "twitter:description", content: "Natural healing. Precise science. Lasting wellness. Book a consultation in Mumbai or Indore." },
     ],
     links: [
       {

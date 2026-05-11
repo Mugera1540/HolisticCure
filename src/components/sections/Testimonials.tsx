@@ -1,12 +1,24 @@
-import { motion } from "framer-motion";
-import { Star, Check } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Star, Check, X } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 
 const reviews = [
-  { quote: "Dr. Anisa healed my 7-year chronic skin condition in 4 months. No steroids, no side effects. Truly miraculous.", name: "Nadia" },
-  { quote: "My son's recurring respiratory infections stopped completely. We haven't visited a hospital in 2 years.", name: "Vaishali" },
-  { quote: "My anxiety and sleep issues resolved naturally. Dr. Anisa listens deeply and treats the whole person.", name: "Tayyab" },
-  { quote: "After years of hormonal issues, I finally found balance. Dr. Anisa's approach changed my life.", name: "Arsh" },
+  { 
+    quote: "Dr. Anisa healed my 7-year chronic skin condition in 4 months. No steroids, no side effects. Truly miraculous. I had tried everything from expensive specialists to home remedies, but nothing worked until I found this holistic approach. The relief of finally having clear skin and no more itching is indescribable.", 
+    name: "Nadia" 
+  },
+  { 
+    quote: "My son's recurring respiratory infections stopped completely. We haven't visited a hospital in 2 years. The personalized care and attention to detail Dr. Anisa provides is unmatched in our experience. She doesn't just treat symptoms; she finds the root cause and builds immunity naturally.", 
+    name: "Vaishali" 
+  },
+  { 
+    quote: "My anxiety and sleep issues resolved naturally. Dr. Anisa listens deeply and treats the whole person. I finally feel like I have control over my life again, without relying on heavy medication that previously left me feeling drained. Her calm demeanor and expertise gave me hope when I had none.", 
+    name: "Tayyab" 
+  },
+  { 
+    quote: "After years of hormonal issues, I finally found balance. Dr. Anisa's approach changed my life. Her deep understanding of women's health and the gentle yet effective nature of the treatment made all the difference. I recommend her to every woman seeking natural healing.", 
+    name: "Arsh" 
+  },
 ];
 
 const StarIcon = ({ size = 14, fill = "none", stroke = "currentColor" }: { size?: number; fill?: string; stroke?: string }) => (
@@ -25,6 +37,7 @@ export function Testimonials() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [paused, setPaused] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [selectedReview, setSelectedReview] = useState<(typeof reviews)[0] | null>(null);
 
   useEffect(() => {
     // Detect touch device to disable auto-scroll
@@ -32,7 +45,7 @@ export function Testimonials() {
   }, []);
 
   useEffect(() => {
-    if (isTouchDevice) return; // Don't auto-scroll on touch devices
+    if (isTouchDevice || selectedReview) return; // Don't auto-scroll on touch or when modal open
     let raf = 0;
     const tick = () => {
       const el = trackRef.current;
@@ -46,7 +59,7 @@ export function Testimonials() {
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [paused, isTouchDevice]);
+  }, [paused, isTouchDevice, selectedReview]);
 
   const tripled = isTouchDevice ? reviews : [...reviews, ...reviews, ...reviews];
 
@@ -83,7 +96,7 @@ export function Testimonials() {
               className="italic font-bold"
               style={{ color: "var(--color-emerald-main)" }}
             >
-              Healing.
+              Stories.
             </em>
           </h2>
         </motion.div>
@@ -101,12 +114,12 @@ export function Testimonials() {
         {tripled.map((r, i) => (
           <article
             key={i}
-            className={`glass-light shrink-0 p-6 sm:p-8 lg:p-10 group transition-all duration-500 hover:-translate-y-1 relative ${
+            className={`glass-light shrink-0 p-6 sm:p-8 lg:p-10 group transition-all duration-500 hover:-translate-y-1 relative flex flex-col ${
               isTouchDevice ? "snap-center" : ""
             }`}
             style={{
               width: "min(500px, 85vw)",
-              minHeight: "260px",
+              minHeight: "320px",
               borderRadius: "24px",
             }}
           >
@@ -120,13 +133,25 @@ export function Testimonials() {
                 />
               ))}
             </div>
-            <p
-              className="font-serif"
-              style={{ fontSize: "clamp(16px, 3.5vw, 22px)", color: "var(--color-ink)", lineHeight: 1.55 }}
-            >
-              "{r.quote}"
-            </p>
-            <div className="mt-6 sm:mt-8 flex items-center gap-3 sm:gap-4">
+            <div className="relative flex-grow">
+              <p
+                className="font-serif line-clamp-4"
+                style={{ fontSize: "clamp(16px, 3.5vw, 20px)", color: "var(--color-ink)", lineHeight: 1.55 }}
+              >
+                "{r.quote}"
+              </p>
+              {r.quote.length > 100 && (
+                <button
+                  onClick={() => setSelectedReview(r)}
+                  className="mt-2 text-[12px] font-bold tracking-widest uppercase text-[var(--color-emerald-main)] hover:opacity-70 transition-opacity flex items-center gap-1"
+                >
+                  Read Story 
+                  <span className="text-[16px]">→</span>
+                </button>
+              )}
+            </div>
+            
+            <div className="mt-8 flex items-center gap-3 sm:gap-4 border-t border-emerald-main/5 pt-6">
               <div
                 className="w-11 h-11 sm:w-14 sm:h-14 rounded-full flex items-center justify-center font-serif text-lg sm:text-xl"
                 style={{
@@ -164,6 +189,86 @@ export function Testimonials() {
           </article>
         ))}
       </div>
+
+      {/* Review Modal */}
+      <AnimatePresence>
+        {selectedReview && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedReview(null)}
+            className="fixed inset-0 z-[1000] flex items-center justify-center p-4 sm:p-6 lg:p-12"
+            style={{ background: "rgba(10, 31, 28, 0.85)", backdropFilter: "blur(12px)" }}
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 20, opacity: 0 }}
+              animate={{ scale: 1, y: 0, opacity: 1 }}
+              exit={{ scale: 0.9, y: 20, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="glass-light w-full max-w-2xl p-8 sm:p-12 lg:p-16 rounded-[32px] relative shadow-[0_32px_64px_-16px_rgba(0,0,0,0.3)]"
+            >
+              <button 
+                onClick={() => setSelectedReview(null)}
+                className="absolute top-6 right-6 p-2 rounded-full hover:bg-emerald-main/5 transition-colors"
+                aria-label="Close review"
+              >
+                <X size={24} style={{ color: "var(--color-emerald-main)" }} />
+              </button>
+
+              <div className="flex items-center gap-1 mb-8">
+                {Array.from({ length: 5 }).map((_, k) => (
+                  <StarIcon
+                    key={k}
+                    size={18}
+                    fill="var(--color-emerald-main)"
+                    stroke="var(--color-emerald-main)"
+                  />
+                ))}
+              </div>
+
+              <p
+                className="font-serif leading-relaxed"
+                style={{ fontSize: "clamp(20px, 4vw, 28px)", color: "var(--color-ink)" }}
+              >
+                "{selectedReview.quote}"
+              </p>
+
+              <div className="mt-12 flex items-center gap-4 sm:gap-6 border-t border-emerald-main/10 pt-8">
+                <div
+                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center font-serif text-2xl sm:text-3xl shadow-inner"
+                  style={{
+                    background: "rgba(26,122,110,0.12)",
+                    color: "var(--color-emerald-main)",
+                  }}
+                >
+                  {selectedReview.name.charAt(0)}
+                </div>
+                <div>
+                  <p
+                    className="font-bold"
+                    style={{ color: "var(--color-emerald-main)", fontSize: "clamp(18px, 3vw, 24px)" }}
+                  >
+                    {selectedReview.name}
+                  </p>
+                  <p
+                    className="mt-1"
+                    style={{
+                      fontSize: "12px",
+                      letterSpacing: "0.28em",
+                      textTransform: "uppercase",
+                      color: "var(--color-ink-faint)",
+                    }}
+                  >
+                    Verified Patient
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
+

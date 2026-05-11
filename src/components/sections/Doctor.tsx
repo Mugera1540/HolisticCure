@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import drImg from "@/assets/dr-anisa.jpg";
+import drImg from "@/assets/Doctor.jpg";
 
 const credentials = [
   "BHMS Graduate",
@@ -36,15 +36,12 @@ export function Doctor() {
               style={{ borderColor: "rgba(26, 122, 110, 0.4)" }}
             />
           ))}
-          <div className="overflow-hidden relative aspect-[3/4] sm:aspect-[4/5]">
+          <div className="overflow-hidden relative aspect-[2/3] sm:aspect-[3/4.5] rounded-sm shadow-soft ring-1 ring-emerald-900/5">
             <img
               src={drImg}
               alt="Dr. Anisa Shaikh — Homeopath"
               loading="lazy"
-              className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
-              style={{ filter: "grayscale(30%)" }}
-              onMouseEnter={(e) => (e.currentTarget.style.filter = "grayscale(0%)")}
-              onMouseLeave={(e) => (e.currentTarget.style.filter = "grayscale(30%)")}
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
             />
           </div>
         </motion.div>
@@ -105,20 +102,31 @@ export function Doctor() {
           </div>
 
           <div
-            className="mt-8 sm:mt-10 pt-6 sm:pt-8 space-y-3"
+            className="mt-8 sm:mt-10 pt-6 sm:pt-8 space-y-5"
             style={{ borderTop: "1px solid rgba(26, 122, 110, 0.15)" }}
           >
-            <p className="flex items-start gap-3" style={{ color: "var(--color-ink-soft)" }}>
+            <div className="flex items-start gap-3">
               <span
                 className="inline-block w-2 h-2 rounded-full mt-2 shrink-0"
                 style={{ background: "var(--color-emerald-main)" }}
               />
-              <span className="text-xs sm:text-sm">
-                Manju Nursing Home, Shubh Sadan 18B, Sindhi Society, Chembur, Mumbai 400071
-              </span>
-            </p>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-[11px] uppercase tracking-wider font-semibold mb-1" style={{ color: "var(--color-emerald-main)" }}>Mumbai Clinic</p>
+                  <p className="text-xs sm:text-sm" style={{ color: "var(--color-ink-soft)" }}>
+                    Ground floor, Manju Nursing Home, Sindhi Society, Chembur, Mumbai - 400071
+                  </p>
+                </div>
+                <div>
+                  <p className="text-[11px] uppercase tracking-wider font-semibold mb-1" style={{ color: "var(--color-emerald-main)" }}>Indore Clinic</p>
+                  <p className="text-xs sm:text-sm" style={{ color: "var(--color-ink-soft)" }}>
+                    LG -04, Om Gurudev Complex, Scheme no 54, Indore (MP)
+                  </p>
+                </div>
+              </div>
+            </div>
             <p className="text-xs ml-5" style={{ color: "var(--color-ink-faint)" }}>
-              Mon–Sat: 11AM–1PM &amp; 6PM–9PM
+              Consultations available by appointment.
             </p>
           </div>
         </motion.div>

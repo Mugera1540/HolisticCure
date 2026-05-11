@@ -136,7 +136,7 @@ export function Navigation() {
                 className="text-white/30"
                 style={{ fontSize: "11px", letterSpacing: "0.24em", textTransform: "uppercase" }}
               >
-                Chembur, Mumbai — Mon–Sat
+                Mumbai &amp; Indore
               </p>
             </div>
           </motion.div>

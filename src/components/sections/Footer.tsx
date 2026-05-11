@@ -41,8 +41,8 @@ export function Footer() {
             Dr. Anisa Shaikh's Clinic
           </p>
           <p className="mt-6 sm:mt-8 text-white/40 text-sm leading-relaxed max-w-xs">
-            Healing naturally. Healing completely. Providing world-class homeopathic care in the
-            heart of Mumbai.
+            Healing naturally. Healing completely. Providing world-class homeopathic care in Mumbai
+            and Indore.
           </p>
 
           <div className="flex items-center gap-5 mt-8">
@@ -78,7 +78,7 @@ export function Footer() {
 
         <div>
           <p
-            className="mb-4 sm:mb-6"
+            className="mb-8 sm:mb-10"
             style={{
               fontSize: "10px",
               letterSpacing: "0.28em",
@@ -86,18 +86,40 @@ export function Footer() {
               color: "var(--color-emerald-light)",
             }}
           >
-            Contact
+            Our Locations
           </p>
-          <p className="text-white/40 text-sm leading-relaxed">
-            Manju Nursing Home, Shubh Sadan 18B,
-            <br />
-            Sindhi Society, Chembur,
-            <br />
-            Mumbai 400071
-          </p>
+
+          <div className="space-y-8">
+            <div>
+              <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/60 mb-3 font-medium">
+                Mumbai Clinic
+              </h4>
+              <p className="text-white/40 text-sm leading-relaxed">
+                Ground floor, Manju Nursing Home,
+                <br />
+                opposite Bhakti Bhavan, next to Sitla Hospital,
+                <br />
+                Sindhi Society, Chembur, Mumbai - 400071
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/60 mb-3 font-medium">
+                Indore Clinic
+              </h4>
+              <p className="text-white/40 text-sm leading-relaxed">
+                LG -04, Om Gurudev Complex, Scheme no 54,
+                <br />
+                Oppo Appolo Hospital, below SBI bank,
+                <br />
+                Indore (MP)
+              </p>
+            </div>
+          </div>
+
           <a
             href="tel:+919324625457"
-            className="block mt-4 sm:mt-6 font-serif text-white hover:text-emerald-light transition-colors"
+            className="block mt-10 sm:mt-12 font-serif text-white hover:text-emerald-light transition-colors"
             style={{ fontSize: "clamp(20px, 3vw, 40px)" }}
           >
             +91 93246 25457

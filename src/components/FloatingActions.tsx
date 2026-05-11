@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 
 const CLINIC_PHONE = "919324625457";
 const CLINIC_EMAIL = "dr.anisaa.shaikh@gmail.com";
+const INSTAGRAM_URL = "https://instagram.com/holisticcure";
+const FACEBOOK_URL = "https://facebook.com/holisticcure";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg
@@ -32,6 +34,42 @@ const MailIcon = ({ size = 24, className }: { size?: number; className?: string 
   </svg>
 );
 
+const InstagramIcon = ({ size = 24, className }: { size?: number; className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
+
+const FacebookIcon = ({ size = 24, className }: { size?: number; className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
 export function FloatingActions() {
   const whatsappUrl = `https://wa.me/${CLINIC_PHONE}`;
   const mailUrl = `mailto:${CLINIC_EMAIL}`;
@@ -40,6 +78,34 @@ export function FloatingActions() {
 
   return (
     <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-[999]">
+      {/* Facebook Button */}
+      <motion.a
+        href={FACEBOOK_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.6, type: "spring", stiffness: 260, damping: 20 }}
+        className={`${buttonBase} bg-[#1877F2] text-white`}
+        aria-label="Follow us on Facebook"
+      >
+        <FacebookIcon className="w-6 h-6 sm:w-7 sm:h-7" />
+      </motion.a>
+
+      {/* Instagram Button */}
+      <motion.a
+        href={INSTAGRAM_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.8, type: "spring", stiffness: 260, damping: 20 }}
+        className={`${buttonBase} bg-white text-[#E4405F] border border-[#E4405F]/10`}
+        aria-label="Follow us on Instagram"
+      >
+        <InstagramIcon className="w-6 h-6 sm:w-7 sm:h-7" />
+      </motion.a>
+
       {/* WhatsApp Button */}
       <motion.a
         href={whatsappUrl}
@@ -70,3 +136,4 @@ export function FloatingActions() {
     </div>
   );
 }
+
