@@ -122,7 +122,7 @@ export function Doctor() {
                     Mumbai Clinic
                   </p>
                   <p className="text-xs sm:text-sm" style={{ color: "var(--color-ink-soft)" }}>
-                    Ground floor, Manju Nursing Home, Sindhi Society, Chembur, Mumbai - 400071
+                    Ground floor, Manju Nursing Home, opposite Bhakti Bhavan next to Sitla Hospital, Sindhi society Chembur Mumbai - 400071
                   </p>
                 </div>
                 <div>
@@ -133,7 +133,7 @@ export function Doctor() {
                     Indore Clinic
                   </p>
                   <p className="text-xs sm:text-sm" style={{ color: "var(--color-ink-soft)" }}>
-                    LG -04, Om Gurudev Complex, Scheme no 54, Indore (MP)
+                    G -04, Om Gurudev Complex, Scheme no 54, Oppo Appolo Hospital, below SBI bank, Indore (MP)
                   </p>
                 </div>
                 <div>

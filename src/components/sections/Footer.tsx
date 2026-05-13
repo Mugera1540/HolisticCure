@@ -190,9 +190,9 @@ export function Footer() {
               <p className="text-white/40 text-sm leading-relaxed">
                 Ground floor, Manju Nursing Home,
                 <br />
-                opposite Bhakti Bhavan, next to Sitla Hospital,
+                opposite Bhakti Bhavan next to Sitla Hospital,
                 <br />
-                Sindhi Society, Chembur, Mumbai - 400071
+                Sindhi society Chembur Mumbai - 400071
               </p>
             </div>
 
@@ -201,7 +201,7 @@ export function Footer() {
                 Indore Clinic
               </h4>
               <p className="text-white/40 text-sm leading-relaxed">
-                LG -04, Om Gurudev Complex, Scheme no 54,
+                G -04, Om Gurudev Complex, Scheme no 54,
                 <br />
                 Oppo Appolo Hospital, below SBI bank,
                 <br />

@@ -439,7 +439,7 @@ function MapSection() {
                   Mumbai Clinic
                 </h4>
                 <p className="text-white/40 text-xs leading-relaxed max-w-[240px]">
-                  Manju Nursing Home, Sindhi Society, Chembur, Mumbai - 400071
+                  Ground floor, Manju Nursing Home, opposite Bhakti Bhavan next to Sitla Hospital, Sindhi society Chembur Mumbai - 400071
                 </p>
               </div>
               <span className="text-[10px] text-[var(--color-gold)] uppercase tracking-[0.2em] border-b border-[var(--color-gold)]/30 pb-1 group-hover:border-[var(--color-gold)] transition-colors">
@@ -480,7 +480,7 @@ function MapSection() {
                   Indore Clinic
                 </h4>
                 <p className="text-white/40 text-xs leading-relaxed max-w-[240px]">
-                  Om Gurudev Complex, Scheme no 54, Vijay Nagar, Indore
+                  G -04, Om Gurudev Complex, Scheme no 54, Oppo Appolo Hospital, below SBI bank, Indore (MP)
                 </p>
               </div>
               <span className="text-[10px] text-[var(--color-gold)] uppercase tracking-[0.2em] border-b border-[var(--color-gold)]/30 pb-1 group-hover:border-[var(--color-gold)] transition-colors">
