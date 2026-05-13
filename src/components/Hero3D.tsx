@@ -3,13 +3,27 @@ import { Float, MeshDistortMaterial, Environment } from "@react-three/drei";
 import { useRef, Suspense, useState, useEffect } from "react";
 import * as THREE from "three";
 
+// Suppress THREE.Clock deprecation warning which is triggered by internal R3F defaults
+if (typeof window !== "undefined") {
+  const originalWarn = console.warn;
+  console.warn = (...args) => {
+    if (typeof args[0] === "string" && args[0].includes("THREE.Clock: This module has been deprecated")) return;
+    originalWarn(...args);
+  };
+}
+
 function Droplet({ isMobile }: { isMobile: boolean }) {
   const ref = useRef<THREE.Mesh>(null);
-  useFrame(({ pointer, clock }) => {
+  const timer = useRef(new (THREE as any).Timer());
+
+  useFrame((_state, delta) => {
     if (!ref.current) return;
-    ref.current.rotation.y = THREE.MathUtils.lerp(ref.current.rotation.y, pointer.x * 0.6, 0.05);
-    ref.current.rotation.x = THREE.MathUtils.lerp(ref.current.rotation.x, -pointer.y * 0.4, 0.05);
-    ref.current.position.y = Math.sin(clock.elapsedTime * 0.6) * 0.15;
+    timer.current.update();
+    const elapsedTime = timer.current.getElapsed();
+    
+    ref.current.rotation.y = THREE.MathUtils.lerp(ref.current.rotation.y, _state.pointer.x * 0.6, 0.05);
+    ref.current.rotation.x = THREE.MathUtils.lerp(ref.current.rotation.x, -_state.pointer.y * 0.4, 0.05);
+    ref.current.position.y = Math.sin(elapsedTime * 0.6) * 0.15;
   });
 
   const segments = isMobile ? 64 : 128;

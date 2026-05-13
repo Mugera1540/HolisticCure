@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "../assets/HC HOMEOPATHY LOGO FINAL-Photoroom.png";
 
 const MenuIcon = ({ size = 24 }: { size?: number }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -20,6 +21,7 @@ const links = [
   { label: "Home", href: "/#hero" },
   { label: "Services", href: "/#services" },
   { label: "Our Doctor", href: "/#doctor" },
+  { label: "Medicine Courier", href: "/courier" },
 ];
 
 export function Navigation() {
@@ -53,20 +55,29 @@ export function Navigation() {
           scrolled ? "glass-nav" : "bg-transparent"
         }`}
       >
-        <nav className="container-luxe flex items-center justify-between py-4 sm:py-5">
-          <a href="/#hero" className="flex flex-col leading-none">
-            <span
-              className="font-serif font-bold text-white"
-              style={{ fontSize: "clamp(16px, 4vw, 20px)", letterSpacing: "0.14em" }}
-            >
-              HOLISTIC CURE
-            </span>
-            <span
-              className="text-white/50 mt-1"
-              style={{ fontSize: "clamp(8px, 2vw, 10px)", letterSpacing: "0.28em", textTransform: "uppercase" }}
-            >
-              Dr. Anisa's Clinic
-            </span>
+        <nav className="container-luxe flex items-center justify-between py-3 sm:py-4">
+          <a href="/#hero" className="flex items-center gap-5 group">
+            <div className="relative w-20 sm:w-28 h-12 sm:h-14 flex items-center justify-center">
+              <img 
+                src={logo} 
+                alt="Holistic Cure Logo" 
+                className="h-28 sm:h-44 w-auto object-contain absolute top-1/2 -translate-y-1/2 transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div className="flex flex-col leading-none">
+              <span
+                className="font-serif font-bold text-white uppercase tracking-[0.2em]"
+                style={{ fontSize: "18px" }}
+              >
+                Holistic Cure
+              </span>
+              <span
+                className="text-white/40 mt-1 uppercase"
+                style={{ fontSize: "10px", letterSpacing: "0.3em" }}
+              >
+                Dr. Anisa's Clinic
+              </span>
+            </div>
           </a>
 
           <div className="hidden lg:flex items-center gap-9">

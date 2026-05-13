@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import drImg from "@/assets/Doctor.jpg";
+import drImg from "../../assets/Doctor.jpg";
 
 const credentials = [
   "BHMS Graduate",
@@ -17,10 +17,10 @@ export function Doctor() {
     >
       <div className="container-luxe grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 lg:gap-32 items-center">
         <motion.div
-          initial={{ clipPath: "inset(100% 0 0 0)" }}
-          whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="relative"
         >
           {/* Corner accents — smaller on mobile */}
@@ -40,8 +40,7 @@ export function Doctor() {
             <img
               src={drImg}
               alt="Dr. Anisa Shaikh — Homeopath"
-              loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
             />
           </div>
         </motion.div>

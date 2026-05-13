@@ -86,34 +86,37 @@ export function Services() {
                   <button
                     key={t}
                     onClick={() => setActive(t)}
-                    className="relative px-5 sm:px-8 py-2.5 sm:py-3.5 rounded-full transition-all duration-300 flex items-center gap-3 group outline-none"
+                    className="relative px-6 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 flex items-center gap-3 group outline-none cursor-pointer"
                   >
                     {isActive && (
                       <motion.div
                         layoutId="active-pill"
-                        className="absolute inset-0 bg-white/10 rounded-full"
+                        className="absolute inset-0 rounded-full shadow-lg"
                         transition={{ type: "spring", bounce: 0.15, duration: 0.6 }}
-                        style={{ border: "1px solid rgba(255,255,255,0.1)" }}
+                        style={{ 
+                          background: "var(--color-emerald-glow)",
+                          border: "1px solid rgba(255,255,255,0.2)"
+                        }}
                       />
                     )}
                     
                     <span 
-                      className="relative z-10 font-mono text-[9px] sm:text-[10px] transition-colors"
+                      className="relative z-10 font-mono text-[10px] sm:text-[11px] transition-colors"
                       style={{ 
-                        opacity: isActive ? 1 : 0.4,
-                        color: isActive ? "var(--color-emerald-glow)" : "white" 
+                        opacity: isActive ? 1 : 0.6,
+                        color: isActive ? "var(--color-emerald-deep)" : "white" 
                       }}
                     >
                       0{i + 1}
                     </span>
                     
                     <span
-                      className="relative z-10 whitespace-nowrap font-medium transition-colors"
+                      className="relative z-10 whitespace-nowrap font-semibold transition-colors"
                       style={{
-                        fontSize: "11px",
-                        letterSpacing: "0.15em",
+                        fontSize: "12px",
+                        letterSpacing: "0.18em",
                         textTransform: "uppercase",
-                        color: isActive ? "white" : "rgba(255,255,255,0.5)",
+                        color: isActive ? "var(--color-emerald-deep)" : "rgba(255,255,255,0.7)",
                       }}
                     >
                       {t}

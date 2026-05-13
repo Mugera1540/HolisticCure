@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, type FormEvent } from "react";
 import { z } from "zod";
-import dropletImg from "@/assets/droplet.jpg";
+import dropletImg from "../../assets/droplet.jpg";
 
 const CLINIC_PHONE = "919324625457";
 const CLINIC_EMAIL = "dr.anisaa.shaikh@gmail.com";
@@ -25,11 +25,19 @@ const MailIcon = ({ size = 14 }: { size?: number }) => (
   </svg>
 );
 
+const ChevronDownIcon = ({ size = 14 }: { size?: number }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="m6 9 6 6 6-6" />
+  </svg>
+);
+
 const TIME_SLOTS = [
   "Morning (11:00 AM – 1:00 PM)",
   "Evening (6:00 PM – 9:00 PM)",
   "Flexible / Doctor's choice",
 ];
+
+const CONSULTATION_TYPES = ["Online Consultation", "In-person Visit"];
 
 const schema = z.object({
   name: z.string().trim().min(2, "Please enter your full name").max(80),
@@ -39,7 +47,8 @@ const schema = z.object({
     .min(7, "Enter a valid phone number")
     .max(20)
     .regex(/^[+\d\s\-()]+$/, "Only digits, spaces and + - ( ) allowed"),
-  slot: z.string().min(1, "Choose a preferred time"),
+  type: z.string({ required_error: "Please select consultation mode" }).min(1, "Please select consultation mode"),
+  slot: z.string({ required_error: "Please select preferred time" }).min(1, "Please select preferred time"),
   note: z.string().trim().max(500, "Please keep under 500 characters").optional(),
 });
 
@@ -49,7 +58,8 @@ export function Booking() {
   const [form, setForm] = useState<FormState>({
     name: "",
     phone: "",
-    slot: TIME_SLOTS[0],
+    type: "",
+    slot: "",
     note: "",
   });
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
@@ -58,6 +68,7 @@ export function Booking() {
     `Appointment Request — Dr. Anisa's Holistic Cure%0A%0A` +
     `Name: ${encodeURIComponent(d.name)}%0A` +
     `Phone: ${encodeURIComponent(d.phone)}%0A` +
+    `Type: ${encodeURIComponent(d.type)}%0A` +
     `Preferred time: ${encodeURIComponent(d.slot)}%0A` +
     `Symptoms / Notes: ${encodeURIComponent(d.note || "—")}`;
 
@@ -94,6 +105,7 @@ export function Booking() {
     const body =
       `Name: ${data.name}\n` +
       `Phone: ${data.phone}\n` +
+      `Consultation: ${data.type}\n` +
       `Preferred time: ${data.slot}\n` +
       `Symptoms / Notes: ${data.note || "—"}`;
     const mailUrl = `mailto:${CLINIC_EMAIL}?subject=${subject}&body=${encodeURIComponent(body)}`;
@@ -181,7 +193,7 @@ export function Booking() {
         >
           <div>
             <label htmlFor="name" className={labelBase} style={labelStyle}>
-              Full Name
+              Full Name *
             </label>
             <input
               id="name"
@@ -201,7 +213,7 @@ export function Booking() {
 
           <div>
             <label htmlFor="phone" className={labelBase} style={labelStyle}>
-              Phone
+              Phone *
             </label>
             <input
               id="phone"
@@ -219,23 +231,64 @@ export function Booking() {
             )}
           </div>
 
-          <div className="md:col-span-2">
-            <label htmlFor="slot" className={labelBase} style={labelStyle}>
-              Preferred Time
-            </label>
-            <select
-              id="slot"
-              value={form.slot}
-              onChange={(e) => setForm({ ...form, slot: e.target.value })}
-              className={`${fieldBase} appearance-none cursor-pointer`}
-              style={{ colorScheme: "dark" }}
-            >
-              {TIME_SLOTS.map((s) => (
-                <option key={s} value={s} className="bg-[var(--color-emerald-deep)]">
-                  {s}
-                </option>
-              ))}
-            </select>
+          <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
+            <div>
+              <label htmlFor="type" className={labelBase} style={labelStyle}>
+                Consultation Mode *
+              </label>
+              <div className="relative">
+                <select
+                  id="type"
+                  value={form.type}
+                  onChange={(e) => setForm({ ...form, type: e.target.value })}
+                  className={`${fieldBase} appearance-none cursor-pointer pr-8`}
+                  style={{ colorScheme: "dark" }}
+                  aria-invalid={!!errors.type}
+                >
+                  <option value="" disabled className="text-white/20">Select Mode...</option>
+                  {CONSULTATION_TYPES.map((t) => (
+                    <option key={t} value={t} className="bg-[var(--color-emerald-deep)]">
+                      {t}
+                    </option>
+                  ))}
+                </select>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-white/40">
+                  <ChevronDownIcon />
+                </div>
+              </div>
+              {errors.type && (
+                <p className="mt-2 text-xs text-red-300/90">{errors.type}</p>
+              )}
+            </div>
+
+            <div>
+              <label htmlFor="slot" className={labelBase} style={labelStyle}>
+                Preferred Time *
+              </label>
+              <div className="relative">
+                <select
+                  id="slot"
+                  value={form.slot}
+                  onChange={(e) => setForm({ ...form, slot: e.target.value })}
+                  className={`${fieldBase} appearance-none cursor-pointer pr-8`}
+                  style={{ colorScheme: "dark" }}
+                  aria-invalid={!!errors.slot}
+                >
+                  <option value="" disabled className="text-white/20">Select Time...</option>
+                  {TIME_SLOTS.map((s) => (
+                    <option key={s} value={s} className="bg-[var(--color-emerald-deep)]">
+                      {s}
+                    </option>
+                  ))}
+                </select>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-white/40">
+                  <ChevronDownIcon />
+                </div>
+              </div>
+              {errors.slot && (
+                <p className="mt-2 text-xs text-red-300/90">{errors.slot}</p>
+              )}
+            </div>
           </div>
 
           <div className="md:col-span-2">
@@ -299,7 +352,102 @@ export function Booking() {
             </span>
           </div>
         </form>
+
+        <MapSection />
       </motion.div>
     </section>
   );
 }
+
+function MapSection() {
+  return (
+    <div className="mt-24 sm:mt-32 border-t border-white/5 pt-20 sm:pt-24">
+      <div className="text-center mb-12 sm:mb-16">
+        <h3 
+          className="font-serif font-light text-white mb-4"
+          style={{ fontSize: "clamp(28px, 5vw, 48px)" }}
+        >
+          Our <em className="italic font-bold" style={{ color: "var(--color-gold)" }}>Locations.</em>
+        </h3>
+        <p className="text-white/40 uppercase tracking-[0.3em] text-[10px]">Mumbai & Indore</p>
+      </div>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        {/* Mumbai Map */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="bg-white/[0.03] p-5 sm:p-6 rounded-sm border border-white/10"
+        >
+          <div className="aspect-[16/10] sm:aspect-video w-full rounded-sm overflow-hidden grayscale contrast-[1.1] brightness-[0.8] hover:grayscale-0 transition-all duration-1000 group">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.852494056247!2d72.88470777595568!3d19.060173382133276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c87c93673751%3A0x6e76cf0bc6488d7!2sManju%20Nursing%20Home!5e0!3m2!1sen!2sin!4v1715574400000!5m2!1sen!2sin" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen 
+              loading="lazy"
+              title="Mumbai Clinic Location"
+            />
+          </div>
+          <div className="mt-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+             <div>
+                <h4 className="text-white font-medium mb-2 tracking-wide">Mumbai Clinic</h4>
+                <p className="text-white/40 text-xs leading-relaxed max-w-[240px]">
+                  Manju Nursing Home, Sindhi Society, Chembur, Mumbai - 400071
+                </p>
+             </div>
+             <a 
+               href="https://www.google.com/maps/search/?api=1&query=Manju+Nursing+Home+Chembur+Mumbai" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               className="text-[10px] text-[var(--color-gold)] uppercase tracking-[0.2em] border-b border-[var(--color-gold)]/30 pb-1 hover:border-[var(--color-gold)] transition-colors"
+             >
+               Get Directions
+             </a>
+          </div>
+        </motion.div>
+
+        {/* Indore Map */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="bg-white/[0.03] p-5 sm:p-6 rounded-sm border border-white/10"
+        >
+          <div className="aspect-[16/10] sm:aspect-video w-full rounded-sm overflow-hidden grayscale contrast-[1.1] brightness-[0.8] hover:grayscale-0 transition-all duration-1000 group">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.529241957241!2d75.89389277592473!3d22.755225182183276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd0012345678%3A0x1234567890abcdef!2sOm%20Gurudev%20Complex!5e0!3m2!1sen!2sin!4v1715574500000!5m2!1sen!2sin" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen 
+              loading="lazy"
+              title="Indore Clinic Location"
+            />
+          </div>
+          <div className="mt-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+             <div>
+                <h4 className="text-white font-medium mb-2 tracking-wide">Indore Clinic</h4>
+                <p className="text-white/40 text-xs leading-relaxed max-w-[240px]">
+                  Om Gurudev Complex, Scheme no 54, Vijay Nagar, Indore
+                </p>
+             </div>
+             <a 
+               href="https://www.google.com/maps/search/?api=1&query=Om+Gurudev+Complex+Scheme+no+54+Indore" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               className="text-[10px] text-[var(--color-gold)] uppercase tracking-[0.2em] border-b border-[var(--color-gold)]/30 pb-1 hover:border-[var(--color-gold)] transition-colors"
+             >
+               Get Directions
+             </a>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
+

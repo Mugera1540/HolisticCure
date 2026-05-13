@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import logoUrl from "../assets/HC HOMEOPATHY LOGO FINAL-Photoroom.png?url";
 
 function NotFoundComponent() {
   return (
@@ -87,6 +88,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:description", content: "Natural healing. Precise science. Lasting wellness. Book a consultation in Mumbai or Indore." },
     ],
     links: [
+      {
+        rel: "icon",
+        href: logoUrl,
+      },
       {
         rel: "stylesheet",
         href: appCss,

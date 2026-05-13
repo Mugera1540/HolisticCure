@@ -9,9 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as CourierRouteImport } from './routes/courier'
 import { Route as BookingRouteImport } from './routes/booking'
 import { Route as IndexRouteImport } from './routes/index'
 
+const CourierRoute = CourierRouteImport.update({
+  id: '/courier',
+  path: '/courier',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BookingRoute = BookingRouteImport.update({
   id: '/booking',
   path: '/booking',
@@ -26,31 +32,42 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/booking': typeof BookingRoute
+  '/courier': typeof CourierRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/booking': typeof BookingRoute
+  '/courier': typeof CourierRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/booking': typeof BookingRoute
+  '/courier': typeof CourierRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/booking'
+  fullPaths: '/' | '/booking' | '/courier'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/booking'
-  id: '__root__' | '/' | '/booking'
+  to: '/' | '/booking' | '/courier'
+  id: '__root__' | '/' | '/booking' | '/courier'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BookingRoute: typeof BookingRoute
+  CourierRoute: typeof CourierRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/courier': {
+      id: '/courier'
+      path: '/courier'
+      fullPath: '/courier'
+      preLoaderRoute: typeof CourierRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/booking': {
       id: '/booking'
       path: '/booking'
@@ -71,6 +88,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BookingRoute: BookingRoute,
+  CourierRoute: CourierRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

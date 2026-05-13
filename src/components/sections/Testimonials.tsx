@@ -199,21 +199,25 @@ export function Testimonials() {
             exit={{ opacity: 0 }}
             onClick={() => setSelectedReview(null)}
             className="fixed inset-0 z-[1000] flex items-center justify-center p-4 sm:p-6 lg:p-12"
-            style={{ background: "rgba(10, 31, 28, 0.85)", backdropFilter: "blur(12px)" }}
+            style={{ 
+              background: "radial-gradient(circle at center, rgba(26, 122, 110, 0.15) 0%, rgba(10, 31, 28, 0.95) 100%)", 
+              backdropFilter: "blur(16px)" 
+            }}
           >
             <motion.div
               initial={{ scale: 0.9, y: 20, opacity: 0 }}
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.9, y: 20, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="glass-light w-full max-w-2xl p-8 sm:p-12 lg:p-16 rounded-[32px] relative shadow-[0_32px_64px_-16px_rgba(0,0,0,0.3)]"
+              className="w-full max-w-2xl p-8 sm:p-12 lg:p-16 rounded-[32px] relative shadow-[0_32px_64px_-16px_rgba(4,15,12,0.6)] ring-1 ring-white/10"
+              style={{ backgroundColor: "var(--color-ivory)" }}
             >
               <button 
                 onClick={() => setSelectedReview(null)}
-                className="absolute top-6 right-6 p-2 rounded-full hover:bg-emerald-main/5 transition-colors"
+                className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-emerald-main/10 hover:bg-emerald-main/20 transition-all duration-300"
                 aria-label="Close review"
               >
-                <X size={24} style={{ color: "var(--color-emerald-main)" }} />
+                <X size={20} style={{ color: "var(--color-emerald-main)" }} />
               </button>
 
               <div className="flex items-center gap-1 mb-8">

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import dropletImg from "@/assets/droplet.jpg";
+import dropletImg from "../../assets/droplet.jpg";
 
 export function Droplet() {
   return (
