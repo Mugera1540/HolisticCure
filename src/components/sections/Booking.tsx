@@ -414,13 +414,13 @@ function MapSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="group"
+          className="group h-full"
         >
           <a
             href="https://www.google.com/maps/search/?api=1&query=Manju+Nursing+Home+Chembur+Mumbai"
             target="_blank"
             rel="noopener noreferrer"
-            className="block bg-white/[0.03] p-5 sm:p-6 rounded-sm border border-white/10 hover:border-[var(--color-gold)]/50 transition-all duration-500 hover:bg-white/[0.05]"
+            className="flex flex-col h-full bg-white/[0.03] p-5 sm:p-6 rounded-sm border border-white/10 hover:border-[var(--color-gold)]/50 transition-all duration-500 hover:bg-white/[0.05]"
           >
             <div className="aspect-[16/10] sm:aspect-video w-full rounded-sm overflow-hidden grayscale contrast-[1.1] brightness-[0.8] group-hover:grayscale-0 transition-all duration-1000 relative">
               <iframe
@@ -433,7 +433,7 @@ function MapSection() {
                 title="Mumbai Clinic Location"
               />
             </div>
-            <div className="mt-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+            <div className="mt-6 flex flex-col justify-between flex-grow gap-4">
               <div>
                 <h4 className="text-white font-medium mb-2 tracking-wide group-hover:text-[var(--color-gold)] transition-colors">
                   Mumbai Clinic
@@ -442,9 +442,11 @@ function MapSection() {
                   Ground floor, Manju Nursing Home, opposite Bhakti Bhavan next to Sitla Hospital, Sindhi society Chembur Mumbai - 400071
                 </p>
               </div>
-              <span className="text-[10px] text-[var(--color-gold)] uppercase tracking-[0.2em] border-b border-[var(--color-gold)]/30 pb-1 group-hover:border-[var(--color-gold)] transition-colors">
-                Get Directions
-              </span>
+              <div className="flex justify-start sm:justify-end">
+                <span className="text-[10px] text-[var(--color-gold)] uppercase tracking-[0.2em] border-b border-[var(--color-gold)]/30 pb-1 group-hover:border-[var(--color-gold)] transition-colors">
+                  Get Directions
+                </span>
+              </div>
             </div>
           </a>
         </motion.div>
@@ -455,13 +457,13 @@ function MapSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="group"
+          className="group h-full"
         >
           <a
             href="https://www.google.com/maps/search/?api=1&query=Om+Gurudev+Complex+Scheme+no+54+Indore"
             target="_blank"
             rel="noopener noreferrer"
-            className="block bg-white/[0.03] p-5 sm:p-6 rounded-sm border border-white/10 hover:border-[var(--color-gold)]/50 transition-all duration-500 hover:bg-white/[0.05]"
+            className="flex flex-col h-full bg-white/[0.03] p-5 sm:p-6 rounded-sm border border-white/10 hover:border-[var(--color-gold)]/50 transition-all duration-500 hover:bg-white/[0.05]"
           >
             <div className="aspect-[16/10] sm:aspect-video w-full rounded-sm overflow-hidden grayscale contrast-[1.1] brightness-[0.8] group-hover:grayscale-0 transition-all duration-1000 relative">
               <iframe
@@ -474,7 +476,7 @@ function MapSection() {
                 title="Indore Clinic Location"
               />
             </div>
-            <div className="mt-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+            <div className="mt-6 flex flex-col justify-between flex-grow gap-4">
               <div>
                 <h4 className="text-white font-medium mb-2 tracking-wide group-hover:text-[var(--color-gold)] transition-colors">
                   Indore Clinic
@@ -483,9 +485,11 @@ function MapSection() {
                   G -04, Om Gurudev Complex, Scheme no 54, Oppo Appolo Hospital, below SBI bank, Indore (MP)
                 </p>
               </div>
-              <span className="text-[10px] text-[var(--color-gold)] uppercase tracking-[0.2em] border-b border-[var(--color-gold)]/30 pb-1 group-hover:border-[var(--color-gold)] transition-colors">
-                Get Directions
-              </span>
+              <div className="flex justify-start sm:justify-end">
+                <span className="text-[10px] text-[var(--color-gold)] uppercase tracking-[0.2em] border-b border-[var(--color-gold)]/30 pb-1 group-hover:border-[var(--color-gold)] transition-colors">
+                  Get Directions
+                </span>
+              </div>
             </div>
           </a>
         </motion.div>
