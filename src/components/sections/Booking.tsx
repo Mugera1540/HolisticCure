@@ -202,6 +202,9 @@ export function Booking() {
               Appointment.
             </em>
           </h2>
+          <p className="mt-4 text-white/40 uppercase tracking-[0.4em] text-[10px] sm:text-[11px] font-bold">
+            Online or In-Person
+          </p>
           <p
             className="mt-6 sm:mt-8 text-white/60 max-w-xl mx-auto text-sm sm:text-base"
             style={{ lineHeight: 1.7 }}
@@ -347,23 +350,30 @@ export function Booking() {
             </button>
           </div>
 
-          <div className="md:col-span-2 mt-1 sm:mt-2 flex flex-col items-center justify-center gap-2 text-white/40 text-xs">
-            <div className="flex items-center gap-2">
-              <PhoneIcon size={12} />
+          <div className="md:col-span-2 mt-8 py-6 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 bg-white/5 backdrop-blur-sm rounded-sm border border-white/5">
+            <div className="flex items-center gap-3 text-white/60 text-[11px] sm:text-xs uppercase tracking-wider font-medium">
+              <div className="w-8 h-8 rounded-full bg-[var(--color-berry)]/20 flex items-center justify-center text-[var(--color-berry)]">
+                <PhoneIcon size={14} />
+              </div>
               <span>
-                Call directly:{" "}
-                <a href={`tel:+${CLINIC_PHONE}`} className="text-white/70 hover:text-white">
+                Call directly: <br />
+                <a href={`tel:+${CLINIC_PHONE}`} className="text-white font-bold hover:text-[var(--color-gold)] transition-colors text-sm sm:text-base tracking-normal">
                   +91 93246 25457
                 </a>
               </span>
             </div>
-            <div className="flex items-center gap-2">
-              <MailIcon size={12} />
+            
+            <div className="w-px h-8 bg-white/10 hidden sm:block" />
+
+            <div className="flex items-center gap-3 text-white/60 text-[11px] sm:text-xs uppercase tracking-wider font-medium">
+              <div className="w-8 h-8 rounded-full bg-[var(--color-gold)]/20 flex items-center justify-center text-[var(--color-gold)]">
+                <MailIcon size={14} />
+              </div>
               <span>
-                Email:{" "}
+                Official Email: <br />
                 <a
                   href="mailto:holistic.cure26@gmail.com"
-                  className="text-white/70 hover:text-white"
+                  className="text-white font-bold hover:text-[var(--color-gold)] transition-colors text-sm sm:text-base tracking-normal"
                 >
                   holistic.cure26@gmail.com
                 </a>
@@ -401,35 +411,37 @@ function MapSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-white/[0.03] p-5 sm:p-6 rounded-sm border border-white/10"
+          className="group"
         >
-          <div className="aspect-[16/10] sm:aspect-video w-full rounded-sm overflow-hidden grayscale contrast-[1.1] brightness-[0.8] hover:grayscale-0 transition-all duration-1000 group">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.852494056247!2d72.88470777595568!3d19.060173382133276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c87c93673751%3A0x6e76cf0bc6488d7!2sManju%20Nursing%20Home!5e0!3m2!1sen!2sin!4v1715574400000!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              title="Mumbai Clinic Location"
-            />
-          </div>
-          <div className="mt-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
-            <div>
-              <h4 className="text-white font-medium mb-2 tracking-wide">Mumbai Clinic</h4>
-              <p className="text-white/40 text-xs leading-relaxed max-w-[240px]">
-                Manju Nursing Home, Sindhi Society, Chembur, Mumbai - 400071
-              </p>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Manju+Nursing+Home+Chembur+Mumbai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-white/[0.03] p-5 sm:p-6 rounded-sm border border-white/10 hover:border-[var(--color-gold)]/50 transition-all duration-500 hover:bg-white/[0.05]"
+          >
+            <div className="aspect-[16/10] sm:aspect-video w-full rounded-sm overflow-hidden grayscale contrast-[1.1] brightness-[0.8] group-hover:grayscale-0 transition-all duration-1000 relative">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.852494056247!2d72.88470777595568!3d19.060173382133276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c87c93673751%3A0x6e76cf0bc6488d7!2sManju%20Nursing%20Home!5e0!3m2!1sen!2sin!4v1715574400000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0, pointerEvents: "none" }}
+                allowFullScreen
+                loading="lazy"
+                title="Mumbai Clinic Location"
+              />
             </div>
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Manju+Nursing+Home+Chembur+Mumbai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[10px] text-[var(--color-gold)] uppercase tracking-[0.2em] border-b border-[var(--color-gold)]/30 pb-1 hover:border-[var(--color-gold)] transition-colors"
-            >
-              Get Directions
-            </a>
-          </div>
+            <div className="mt-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+              <div>
+                <h4 className="text-white font-medium mb-2 tracking-wide group-hover:text-[var(--color-gold)] transition-colors">Mumbai Clinic</h4>
+                <p className="text-white/40 text-xs leading-relaxed max-w-[240px]">
+                  Manju Nursing Home, Sindhi Society, Chembur, Mumbai - 400071
+                </p>
+              </div>
+              <span className="text-[10px] text-[var(--color-gold)] uppercase tracking-[0.2em] border-b border-[var(--color-gold)]/30 pb-1 group-hover:border-[var(--color-gold)] transition-colors">
+                Get Directions
+              </span>
+            </div>
+          </a>
         </motion.div>
 
         {/* Indore Map */}
@@ -438,35 +450,37 @@ function MapSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-white/[0.03] p-5 sm:p-6 rounded-sm border border-white/10"
+          className="group"
         >
-          <div className="aspect-[16/10] sm:aspect-video w-full rounded-sm overflow-hidden grayscale contrast-[1.1] brightness-[0.8] hover:grayscale-0 transition-all duration-1000 group">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.529241957241!2d75.89389277592473!3d22.755225182183276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd0012345678%3A0x1234567890abcdef!2sOm%20Gurudev%20Complex!5e0!3m2!1sen!2sin!4v1715574500000!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              title="Indore Clinic Location"
-            />
-          </div>
-          <div className="mt-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
-            <div>
-              <h4 className="text-white font-medium mb-2 tracking-wide">Indore Clinic</h4>
-              <p className="text-white/40 text-xs leading-relaxed max-w-[240px]">
-                Om Gurudev Complex, Scheme no 54, Vijay Nagar, Indore
-              </p>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Om+Gurudev+Complex+Scheme+no+54+Indore"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-white/[0.03] p-5 sm:p-6 rounded-sm border border-white/10 hover:border-[var(--color-gold)]/50 transition-all duration-500 hover:bg-white/[0.05]"
+          >
+            <div className="aspect-[16/10] sm:aspect-video w-full rounded-sm overflow-hidden grayscale contrast-[1.1] brightness-[0.8] group-hover:grayscale-0 transition-all duration-1000 relative">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.529241957241!2d75.89389277592473!3d22.755225182183276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd0012345678%3A0x1234567890abcdef!2sOm%20Gurudev%20Complex!5e0!3m2!1sen!2sin!4v1715574500000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0, pointerEvents: "none" }}
+                allowFullScreen
+                loading="lazy"
+                title="Indore Clinic Location"
+              />
             </div>
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Om+Gurudev+Complex+Scheme+no+54+Indore"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[10px] text-[var(--color-gold)] uppercase tracking-[0.2em] border-b border-[var(--color-gold)]/30 pb-1 hover:border-[var(--color-gold)] transition-colors"
-            >
-              Get Directions
-            </a>
-          </div>
+            <div className="mt-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+              <div>
+                <h4 className="text-white font-medium mb-2 tracking-wide group-hover:text-[var(--color-gold)] transition-colors">Indore Clinic</h4>
+                <p className="text-white/40 text-xs leading-relaxed max-w-[240px]">
+                  Om Gurudev Complex, Scheme no 54, Vijay Nagar, Indore
+                </p>
+              </div>
+              <span className="text-[10px] text-[var(--color-gold)] uppercase tracking-[0.2em] border-b border-[var(--color-gold)]/30 pb-1 group-hover:border-[var(--color-gold)] transition-colors">
+                Get Directions
+              </span>
+            </div>
+          </a>
         </motion.div>
       </div>
     </div>
