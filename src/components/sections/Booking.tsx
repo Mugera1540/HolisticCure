@@ -357,12 +357,15 @@ export function Booking() {
               </div>
               <span>
                 Call directly: <br />
-                <a href={`tel:+${CLINIC_PHONE}`} className="text-white font-bold hover:text-[var(--color-gold)] transition-colors text-sm sm:text-base tracking-normal">
+                <a
+                  href={`tel:+${CLINIC_PHONE}`}
+                  className="text-white font-bold hover:text-[var(--color-gold)] transition-colors text-sm sm:text-base tracking-normal"
+                >
                   +91 93246 25457
                 </a>
               </span>
             </div>
-            
+
             <div className="w-px h-8 bg-white/10 hidden sm:block" />
 
             <div className="flex items-center gap-3 text-white/60 text-[11px] sm:text-xs uppercase tracking-wider font-medium">
@@ -432,7 +435,9 @@ function MapSection() {
             </div>
             <div className="mt-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
               <div>
-                <h4 className="text-white font-medium mb-2 tracking-wide group-hover:text-[var(--color-gold)] transition-colors">Mumbai Clinic</h4>
+                <h4 className="text-white font-medium mb-2 tracking-wide group-hover:text-[var(--color-gold)] transition-colors">
+                  Mumbai Clinic
+                </h4>
                 <p className="text-white/40 text-xs leading-relaxed max-w-[240px]">
                   Manju Nursing Home, Sindhi Society, Chembur, Mumbai - 400071
                 </p>
@@ -471,7 +476,9 @@ function MapSection() {
             </div>
             <div className="mt-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
               <div>
-                <h4 className="text-white font-medium mb-2 tracking-wide group-hover:text-[var(--color-gold)] transition-colors">Indore Clinic</h4>
+                <h4 className="text-white font-medium mb-2 tracking-wide group-hover:text-[var(--color-gold)] transition-colors">
+                  Indore Clinic
+                </h4>
                 <p className="text-white/40 text-xs leading-relaxed max-w-[240px]">
                   Om Gurudev Complex, Scheme no 54, Vijay Nagar, Indore
                 </p>
