@@ -79,7 +79,7 @@ export function Footer() {
 
           <div className="flex items-center gap-5 mt-8">
             <a
-              href="https://instagram.com/holisticcure"
+              href="https://www.instagram.com/holisticure_/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/40 hover:text-[var(--color-gold)] transition-colors p-2 -ml-2"
@@ -88,7 +88,7 @@ export function Footer() {
               <InstagramIcon size={20} />
             </a>
             <a
-              href="https://facebook.com/holisticcure"
+              href="https://www.facebook.com/people/Dr-Anisas-Holistic-Cure/100089554737013/?rdid=mJzPwZCaFJHeGSUc"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/40 hover:text-[var(--color-gold)] transition-colors p-2"
@@ -106,7 +106,7 @@ export function Footer() {
               <WhatsAppIcon size={20} />
             </a>
             <a
-              href="mailto:contact@holisticcure.in"
+              href="mailto:dr.anisaa.shaikh@gmail.com"
               className="text-white/40 hover:text-[var(--color-gold)] transition-colors p-2"
               aria-label="Send us an Email"
             >

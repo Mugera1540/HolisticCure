@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 const CLINIC_PHONE = "919324625457";
 const CLINIC_EMAIL = "dr.anisaa.shaikh@gmail.com";
-const INSTAGRAM_URL = "https://instagram.com/holisticcure";
-const FACEBOOK_URL = "https://facebook.com/holisticcure";
+const INSTAGRAM_URL = "https://www.instagram.com/holisticure_/";
+const FACEBOOK_URL = "https://www.facebook.com/people/Dr-Anisas-Holistic-Cure/100089554737013/?rdid=mJzPwZCaFJHeGSUc";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg

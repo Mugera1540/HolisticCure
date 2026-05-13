@@ -122,6 +122,12 @@ export function Doctor() {
                     LG -04, Om Gurudev Complex, Scheme no 54, Indore (MP)
                   </p>
                 </div>
+                <div>
+                  <p className="text-[11px] uppercase tracking-wider font-semibold mb-1" style={{ color: "var(--color-emerald-main)" }}>Email</p>
+                  <a href="mailto:dr.anisaa.shaikh@gmail.com" className="text-xs sm:text-sm hover:text-emerald-600 transition-colors" style={{ color: "var(--color-ink-soft)" }}>
+                    dr.anisaa.shaikh@gmail.com
+                  </a>
+                </div>
               </div>
             </div>
             <p className="text-xs ml-5" style={{ color: "var(--color-ink-faint)" }}>

@@ -4,7 +4,6 @@ import { z } from "zod";
 import dropletImg from "../../assets/droplet.jpg";
 
 const CLINIC_PHONE = "919324625457";
-const CLINIC_EMAIL = "dr.anisaa.shaikh@gmail.com";
 
 const PhoneIcon = ({ size = 12 }: { size?: number }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -24,6 +23,7 @@ const MailIcon = ({ size = 14 }: { size?: number }) => (
     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
   </svg>
 );
+
 
 const ChevronDownIcon = ({ size = 14 }: { size?: number }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -98,19 +98,6 @@ export function Booking() {
     );
   };
 
-  const submitEmail = () => {
-    const data = validate();
-    if (!data) return;
-    const subject = encodeURIComponent("Appointment Request — Holistic Cure");
-    const body =
-      `Name: ${data.name}\n` +
-      `Phone: ${data.phone}\n` +
-      `Consultation: ${data.type}\n` +
-      `Preferred time: ${data.slot}\n` +
-      `Symptoms / Notes: ${data.note || "—"}`;
-    const mailUrl = `mailto:${CLINIC_EMAIL}?subject=${subject}&body=${encodeURIComponent(body)}`;
-    window.open(mailUrl, "_blank");
-  };
 
   const fieldBase =
     "w-full bg-transparent border-b border-white/20 focus:border-[var(--color-gold)] outline-none text-white placeholder-white/40 py-3 transition-colors text-base";
@@ -182,7 +169,7 @@ export function Booking() {
             style={{ lineHeight: 1.7 }}
           >
             Share a few details and Dr. Anisa's team will confirm your consultation
-            within hours — via WhatsApp or email.
+            within hours — via WhatsApp.
           </p>
         </div>
 
@@ -316,7 +303,7 @@ export function Booking() {
           <div className="md:col-span-2 mt-2 sm:mt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-5">
             <button
               type="submit"
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 text-white transition-all duration-500 hover:-translate-y-0.5 w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-3 px-12 py-4 text-white transition-all duration-500 hover:-translate-y-0.5 w-full sm:w-auto"
               style={{
                 backgroundColor: "#25D366",
                 fontSize: "11px",
@@ -328,28 +315,27 @@ export function Booking() {
             >
               <WhatsAppIcon size={14} /> Send via WhatsApp
             </button>
-            <button
-              type="button"
-              onClick={submitEmail}
-              className="inline-flex items-center justify-center gap-3 border border-white/50 text-white px-8 py-4 hover:bg-white hover:text-[color:var(--color-emerald-deep)] transition-all duration-500 hover:-translate-y-0.5 w-full sm:w-auto"
-              style={{
-                fontSize: "11px",
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
-              }}
-            >
-              <MailIcon size={14} /> Send via Email
-            </button>
           </div>
 
-          <div className="md:col-span-2 mt-1 sm:mt-2 flex items-center justify-center gap-2 text-white/40 text-xs">
-            <PhoneIcon size={12} />
-            <span>
-              Or call directly:{" "}
-              <a href={`tel:+${CLINIC_PHONE}`} className="text-white/70 hover:text-white">
-                +91 93246 25457
-              </a>
-            </span>
+          <div className="md:col-span-2 mt-1 sm:mt-2 flex flex-col items-center justify-center gap-2 text-white/40 text-xs">
+            <div className="flex items-center gap-2">
+              <PhoneIcon size={12} />
+              <span>
+                Call directly:{" "}
+                <a href={`tel:+${CLINIC_PHONE}`} className="text-white/70 hover:text-white">
+                  +91 93246 25457
+                </a>
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <MailIcon size={12} />
+              <span>
+                Email:{" "}
+                <a href="mailto:dr.anisaa.shaikh@gmail.com" className="text-white/70 hover:text-white">
+                  dr.anisaa.shaikh@gmail.com
+                </a>
+              </span>
+            </div>
           </div>
         </form>
 
