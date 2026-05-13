@@ -372,8 +372,10 @@ export function Courier() {
             </div>
           </motion.form>
 
-          <div className="mt-12 text-center text-white/40 text-[10px] uppercase tracking-[0.2em] font-medium">
-            Average delivery time: 2-3 days (Local) | 4-6 days (Outstation)
+          <div className="mt-12 flex justify-center">
+            <div className="px-6 py-3 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 text-center text-white/70 text-[10px] sm:text-[11px] uppercase tracking-[0.25em] font-bold shadow-xl">
+              Average delivery time: 2-3 days (Local) | 4-6 days (Outstation)
+            </div>
           </div>
         </div>
       </div>
