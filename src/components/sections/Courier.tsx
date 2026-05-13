@@ -345,7 +345,7 @@ export function Courier() {
                         )}
                       </div>
                     </div>
-                    <span className="text-[11px] text-white/70 leading-relaxed select-none font-medium">
+                    <span className="text-[13px] text-white/70 leading-relaxed select-none font-medium">
                       I understand that courier charges will be calculated and added to the total
                       cost based on my location. *
                     </span>
