@@ -10,6 +10,7 @@ import {
 
 import appCss from "../styles.css?url";
 import logoUrl from "../assets/HC HOMEOPATHY LOGO FINAL-Photoroom.png?url";
+import faviconUrl from "../assets/HC-HOMEOPATHY.svg?url";
 
 function NotFoundComponent() {
   return (
@@ -90,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       {
         rel: "icon",
-        href: logoUrl,
+        href: faviconUrl,
       },
       {
         rel: "stylesheet",
