@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 import aboutImg from "../../assets/about-healing.jpg";
 
-const pills = ["🌿 No Side Effects", "💧 100% Natural"];
+const pills = [
+  "🌿 No Side Effects",
+  "💧 100% Natural",
+  "🧸 Child-Friendly",
+  "📋 Tailored Medicine",
+];
 
 export function About() {
   return (
