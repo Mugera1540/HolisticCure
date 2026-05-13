@@ -73,7 +73,11 @@ export function Doctor() {
 
           <p
             className="mt-6 sm:mt-8 max-w-xl"
-            style={{ fontSize: "clamp(14px, 2.5vw, 16px)", lineHeight: 1.85, color: "var(--color-ink-soft)" }}
+            style={{
+              fontSize: "clamp(14px, 2.5vw, 16px)",
+              lineHeight: 1.85,
+              color: "var(--color-ink-soft)",
+            }}
           >
             Dr. Anisa is a passionate Homeopath trained under some of the most affluent and
             experienced Homeopaths worldwide. Holding a Diploma from the{" "}
@@ -111,20 +115,39 @@ export function Doctor() {
               />
               <div className="space-y-4">
                 <div>
-                  <p className="text-[11px] uppercase tracking-wider font-semibold mb-1" style={{ color: "var(--color-emerald-main)" }}>Mumbai Clinic</p>
+                  <p
+                    className="text-[11px] uppercase tracking-wider font-semibold mb-1"
+                    style={{ color: "var(--color-emerald-main)" }}
+                  >
+                    Mumbai Clinic
+                  </p>
                   <p className="text-xs sm:text-sm" style={{ color: "var(--color-ink-soft)" }}>
                     Ground floor, Manju Nursing Home, Sindhi Society, Chembur, Mumbai - 400071
                   </p>
                 </div>
                 <div>
-                  <p className="text-[11px] uppercase tracking-wider font-semibold mb-1" style={{ color: "var(--color-emerald-main)" }}>Indore Clinic</p>
+                  <p
+                    className="text-[11px] uppercase tracking-wider font-semibold mb-1"
+                    style={{ color: "var(--color-emerald-main)" }}
+                  >
+                    Indore Clinic
+                  </p>
                   <p className="text-xs sm:text-sm" style={{ color: "var(--color-ink-soft)" }}>
                     LG -04, Om Gurudev Complex, Scheme no 54, Indore (MP)
                   </p>
                 </div>
                 <div>
-                  <p className="text-[11px] uppercase tracking-wider font-semibold mb-1" style={{ color: "var(--color-emerald-main)" }}>Email</p>
-                  <a href="mailto:dr.anisaa.shaikh@gmail.com" className="text-xs sm:text-sm hover:text-emerald-600 transition-colors" style={{ color: "var(--color-ink-soft)" }}>
+                  <p
+                    className="text-[11px] uppercase tracking-wider font-semibold mb-1"
+                    style={{ color: "var(--color-emerald-main)" }}
+                  >
+                    Email
+                  </p>
+                  <a
+                    href="mailto:dr.anisaa.shaikh@gmail.com"
+                    className="text-xs sm:text-sm hover:text-emerald-600 transition-colors"
+                    style={{ color: "var(--color-ink-soft)" }}
+                  >
                     dr.anisaa.shaikh@gmail.com
                   </a>
                 </div>

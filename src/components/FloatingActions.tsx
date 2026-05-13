@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 const CLINIC_PHONE = "919324625457";
 const CLINIC_EMAIL = "dr.anisaa.shaikh@gmail.com";
 const INSTAGRAM_URL = "https://www.instagram.com/holisticure_/";
-const FACEBOOK_URL = "https://www.facebook.com/people/Dr-Anisas-Holistic-Cure/100089554737013/?rdid=mJzPwZCaFJHeGSUc";
+const FACEBOOK_URL =
+  "https://www.facebook.com/people/Dr-Anisas-Holistic-Cure/100089554737013/?rdid=mJzPwZCaFJHeGSUc";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg
@@ -74,7 +75,8 @@ export function FloatingActions() {
   const whatsappUrl = `https://wa.me/${CLINIC_PHONE}`;
   const mailUrl = `mailto:${CLINIC_EMAIL}`;
 
-  const buttonBase = "w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110 active:scale-95 z-[999]";
+  const buttonBase =
+    "w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110 active:scale-95 z-[999]";
 
   return (
     <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-[999]">
@@ -136,4 +138,3 @@ export function FloatingActions() {
     </div>
   );
 }
-

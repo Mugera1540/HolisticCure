@@ -9,8 +9,7 @@ export const Route = createFileRoute("/courier")({
   head: () => ({
     meta: [
       {
-        title:
-          "Medicine Courier Service — Dr. Anisa's Holistic Cure",
+        title: "Medicine Courier Service — Dr. Anisa's Holistic Cure",
       },
       {
         name: "description",

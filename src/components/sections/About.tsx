@@ -66,11 +66,15 @@ export function About() {
 
           <p
             className="max-w-xl"
-            style={{ fontSize: "clamp(14px, 2.5vw, 16px)", lineHeight: 1.85, color: "var(--color-ink-soft)" }}
+            style={{
+              fontSize: "clamp(14px, 2.5vw, 16px)",
+              lineHeight: 1.85,
+              color: "var(--color-ink-soft)",
+            }}
           >
-            Homeopathy is a precise science that stimulates the body's own healing response.
-            Dr. Anisa believes in the Mind-Body-Soul axis — treating the individual as a whole
-            to restore balance and vitality from the root.
+            Homeopathy is a precise science that stimulates the body's own healing response. Dr.
+            Anisa believes in the Mind-Body-Soul axis — treating the individual as a whole to
+            restore balance and vitality from the root.
           </p>
 
           <div className="mt-8 sm:mt-10 flex flex-wrap gap-2 sm:gap-3">

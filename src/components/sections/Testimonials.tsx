@@ -3,32 +3,74 @@ import { Star, Check, X } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 
 const reviews = [
-  { 
-    quote: "Dr. Anisa healed my 7-year chronic skin condition in 4 months. No steroids, no side effects. Truly miraculous. I had tried everything from expensive specialists to home remedies, but nothing worked until I found this holistic approach. The relief of finally having clear skin and no more itching is indescribable.", 
-    name: "Nadia" 
+  {
+    quote:
+      "Dr. Anisa healed my 7-year chronic skin condition in 4 months. No steroids, no side effects. Truly miraculous. I had tried everything from expensive specialists to home remedies, but nothing worked until I found this holistic approach. The relief of finally having clear skin and no more itching is indescribable.",
+    name: "Nadia",
   },
-  { 
-    quote: "My son's recurring respiratory infections stopped completely. We haven't visited a hospital in 2 years. The personalized care and attention to detail Dr. Anisa provides is unmatched in our experience. She doesn't just treat symptoms; she finds the root cause and builds immunity naturally.", 
-    name: "Vaishali" 
+  {
+    quote:
+      "My son's recurring respiratory infections stopped completely. We haven't visited a hospital in 2 years. The personalized care and attention to detail Dr. Anisa provides is unmatched in our experience. She doesn't just treat symptoms; she finds the root cause and builds immunity naturally.",
+    name: "Vaishali",
   },
-  { 
-    quote: "My anxiety and sleep issues resolved naturally. Dr. Anisa listens deeply and treats the whole person. I finally feel like I have control over my life again, without relying on heavy medication that previously left me feeling drained. Her calm demeanor and expertise gave me hope when I had none.", 
-    name: "Tayyab" 
+  {
+    quote:
+      "My anxiety and sleep issues resolved naturally. Dr. Anisa listens deeply and treats the whole person. I finally feel like I have control over my life again, without relying on heavy medication that previously left me feeling drained. Her calm demeanor and expertise gave me hope when I had none.",
+    name: "Tayyab",
   },
-  { 
-    quote: "After years of hormonal issues, I finally found balance. Dr. Anisa's approach changed my life. Her deep understanding of women's health and the gentle yet effective nature of the treatment made all the difference. I recommend her to every woman seeking natural healing.", 
-    name: "Arsh" 
+  {
+    quote:
+      "After years of hormonal issues, I finally found balance. Dr. Anisa's approach changed my life. Her deep understanding of women's health and the gentle yet effective nature of the treatment made all the difference. I recommend her to every woman seeking natural healing.",
+    name: "Arsh",
   },
 ];
 
-const StarIcon = ({ size = 14, fill = "none", stroke = "currentColor" }: { size?: number; fill?: string; stroke?: string }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+const StarIcon = ({
+  size = 14,
+  fill = "none",
+  stroke = "currentColor",
+}: {
+  size?: number;
+  fill?: string;
+  stroke?: string;
+}) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill={fill}
+    stroke={stroke}
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
   </svg>
 );
 
-const CheckIcon = ({ size = 20, className, style }: { size?: number; className?: string; style?: React.CSSProperties }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+const CheckIcon = ({
+  size = 20,
+  className,
+  style,
+}: {
+  size?: number;
+  className?: string;
+  style?: React.CSSProperties;
+}) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    style={style}
+  >
     <path d="M20 6 9 17l-5-5" />
   </svg>
 );
@@ -86,16 +128,16 @@ export function Testimonials() {
           transition={{ duration: 0.8 }}
           className="max-w-3xl"
         >
-          <div className="w-10 h-px mb-4 sm:mb-6" style={{ background: "var(--color-emerald-main)" }} />
+          <div
+            className="w-10 h-px mb-4 sm:mb-6"
+            style={{ background: "var(--color-emerald-main)" }}
+          />
           <h2
             className="font-serif leading-[1.05]"
             style={{ fontSize: "clamp(36px, 6vw, 84px)", color: "var(--color-ink)" }}
           >
             Real{" "}
-            <em
-              className="italic font-bold"
-              style={{ color: "var(--color-emerald-main)" }}
-            >
+            <em className="italic font-bold" style={{ color: "var(--color-emerald-main)" }}>
               Stories.
             </em>
           </h2>
@@ -136,7 +178,11 @@ export function Testimonials() {
             <div className="relative flex-grow">
               <p
                 className="font-serif line-clamp-4"
-                style={{ fontSize: "clamp(16px, 3.5vw, 20px)", color: "var(--color-ink)", lineHeight: 1.55 }}
+                style={{
+                  fontSize: "clamp(16px, 3.5vw, 20px)",
+                  color: "var(--color-ink)",
+                  lineHeight: 1.55,
+                }}
               >
                 "{r.quote}"
               </p>
@@ -145,12 +191,12 @@ export function Testimonials() {
                   onClick={() => setSelectedReview(r)}
                   className="mt-2 text-[12px] font-bold tracking-widest uppercase text-[var(--color-emerald-main)] hover:opacity-70 transition-opacity flex items-center gap-1"
                 >
-                  Read Story 
+                  Read Story
                   <span className="text-[16px]">→</span>
                 </button>
               )}
             </div>
-            
+
             <div className="mt-8 flex items-center gap-3 sm:gap-4 border-t border-emerald-main/5 pt-6">
               <div
                 className="w-11 h-11 sm:w-14 sm:h-14 rounded-full flex items-center justify-center font-serif text-lg sm:text-xl"
@@ -199,9 +245,10 @@ export function Testimonials() {
             exit={{ opacity: 0 }}
             onClick={() => setSelectedReview(null)}
             className="fixed inset-0 z-[1000] flex items-center justify-center p-4 sm:p-6 lg:p-12"
-            style={{ 
-              background: "radial-gradient(circle at center, rgba(26, 122, 110, 0.15) 0%, rgba(10, 31, 28, 0.95) 100%)", 
-              backdropFilter: "blur(16px)" 
+            style={{
+              background:
+                "radial-gradient(circle at center, rgba(26, 122, 110, 0.15) 0%, rgba(10, 31, 28, 0.95) 100%)",
+              backdropFilter: "blur(16px)",
             }}
           >
             <motion.div
@@ -212,7 +259,7 @@ export function Testimonials() {
               className="w-full max-w-2xl p-8 sm:p-12 lg:p-16 rounded-[32px] relative shadow-[0_32px_64px_-16px_rgba(4,15,12,0.6)] ring-1 ring-white/10"
               style={{ backgroundColor: "var(--color-ivory)" }}
             >
-              <button 
+              <button
                 onClick={() => setSelectedReview(null)}
                 className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-emerald-main/10 hover:bg-emerald-main/20 transition-all duration-300"
                 aria-label="Close review"
@@ -251,7 +298,10 @@ export function Testimonials() {
                 <div>
                   <p
                     className="font-bold"
-                    style={{ color: "var(--color-emerald-main)", fontSize: "clamp(18px, 3vw, 24px)" }}
+                    style={{
+                      color: "var(--color-emerald-main)",
+                      fontSize: "clamp(18px, 3vw, 24px)",
+                    }}
                   >
                     {selectedReview.name}
                   </p>
@@ -275,4 +325,3 @@ export function Testimonials() {
     </section>
   );
 }
-

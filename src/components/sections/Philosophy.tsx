@@ -25,7 +25,8 @@ export function Philosophy() {
       <div
         className="absolute inset-0"
         style={{
-          background: "radial-gradient(ellipse at center, transparent 40%, rgba(4,15,12,0.85) 100%)",
+          background:
+            "radial-gradient(ellipse at center, transparent 40%, rgba(4,15,12,0.85) 100%)",
         }}
       />
 
@@ -59,26 +60,26 @@ export function Philosophy() {
         </h2>
 
         <p className="mt-6 sm:mt-8 text-white/60 max-w-2xl mx-auto text-base sm:text-lg lg:text-xl leading-relaxed">
-          Holistic Cure is the premier homeopathy provider that offers excellent medical care,
-          with personalized attention &amp; consultation with the highest quality medicines.
+          Holistic Cure is the premier homeopathy provider that offers excellent medical care, with
+          personalized attention &amp; consultation with the highest quality medicines.
         </p>
 
         <div className="mt-10 sm:mt-16 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {[
             {
               title: "The Globule",
-              body:
-                "Our signature lactose-free globules are the carrier for high-potency energy remedies, ensuring deep absorption.",
+              body: "Our signature lactose-free globules are the carrier for high-potency energy remedies, ensuring deep absorption.",
             },
             {
               title: "Dynamic Healing",
-              body:
-                "We focus on the 'Vital Force'—addressing the root energetic imbalance rather than just suppressing symptoms.",
+              body: "We focus on the 'Vital Force'—addressing the root energetic imbalance rather than just suppressing symptoms.",
             },
           ].map((c) => (
             <div key={c.title} className="glass-dark rounded-sm p-6 sm:p-8 text-left shadow-2xl">
               <h3 className="font-serif italic text-2xl sm:text-3xl text-white">{c.title}</h3>
-              <p className="mt-3 sm:mt-4 text-white/60 text-sm sm:text-base leading-relaxed">{c.body}</p>
+              <p className="mt-3 sm:mt-4 text-white/60 text-sm sm:text-base leading-relaxed">
+                {c.body}
+              </p>
             </div>
           ))}
         </div>

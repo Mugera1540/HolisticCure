@@ -9,8 +9,7 @@ export const Route = createFileRoute("/booking")({
   head: () => ({
     meta: [
       {
-        title:
-          "Book Appointment — Dr. Anisa's Holistic Cure | Mumbai & Indore",
+        title: "Book Appointment — Dr. Anisa's Holistic Cure | Mumbai & Indore",
       },
       {
         name: "description",

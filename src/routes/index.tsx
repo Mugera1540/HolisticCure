@@ -51,8 +51,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title:
-          "Dr. Anisa's Holistic Cure — Premium Homeopathy Clinic in Mumbai & Indore",
+        title: "Dr. Anisa's Holistic Cure — Premium Homeopathy Clinic in Mumbai & Indore",
       },
       {
         name: "description",
@@ -87,9 +86,7 @@ export const Route = createFileRoute("/")({
           "Natural healing. Precise science. Lasting wellness. Book a consultation in Mumbai or Indore.",
       },
     ],
-    links: [
-      { rel: "canonical", href: "https://holisticcure.in/" },
-    ],
+    links: [{ rel: "canonical", href: "https://holisticcure.in/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -137,4 +134,3 @@ function Index() {
     </>
   );
 }
-

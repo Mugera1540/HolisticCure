@@ -61,11 +61,19 @@ export function Hero() {
       />
       <div
         className="absolute top-1/3 left-1/4 w-[120px] h-[120px] sm:w-[180px] sm:h-[180px] lg:w-[250px] lg:h-[250px] rounded-full opacity-40 animate-drift"
-        style={{ background: "var(--color-emerald-glow)", filter: "blur(70px)", animationDelay: "-12s" }}
+        style={{
+          background: "var(--color-emerald-glow)",
+          filter: "blur(70px)",
+          animationDelay: "-12s",
+        }}
       />
       <div
         className="absolute top-1/4 -right-12 w-[180px] h-[180px] sm:w-[240px] sm:h-[240px] rounded-full opacity-25 animate-drift"
-        style={{ background: "var(--color-berry-glow)", filter: "blur(90px)", animationDelay: "-3s" }}
+        style={{
+          background: "var(--color-berry-glow)",
+          filter: "blur(90px)",
+          animationDelay: "-3s",
+        }}
       />
 
       {/* 3D Droplet */}
@@ -111,7 +119,6 @@ export function Hero() {
           <br />
           <span className="font-semibold">Within.</span>
         </motion.h1>
-
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -120,7 +127,8 @@ export function Hero() {
           style={{ fontSize: "clamp(16px, 2.5vw, 22px)", lineHeight: 1.7, fontWeight: 300 }}
         >
           The white pills that lead to a colourful life
-        </motion.p>        <motion.div
+        </motion.p>{" "}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.8 }}
@@ -132,7 +140,9 @@ export function Hero() {
           >
             <span className="relative z-10 flex items-center justify-center gap-3">
               Book Appointment
-              <span className="transition-transform duration-500 group-hover:translate-x-1.5">→</span>
+              <span className="transition-transform duration-500 group-hover:translate-x-1.5">
+                →
+              </span>
             </span>
           </a>
 
@@ -150,7 +160,9 @@ export function Hero() {
 
       {/* Scroll indicator — safe area aware */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 safe-bottom hidden sm:flex">
-        <span style={{ fontSize: "9px", letterSpacing: "0.3em", textTransform: "uppercase" }}>Scroll</span>
+        <span style={{ fontSize: "9px", letterSpacing: "0.3em", textTransform: "uppercase" }}>
+          Scroll
+        </span>
         <div className="w-px h-12 bg-gradient-to-b from-white/40 to-transparent" />
       </div>
     </section>

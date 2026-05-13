@@ -5,30 +5,84 @@ type Service = { title: string; desc: string };
 
 const data: Record<string, Service[]> = {
   "Chronic & Internal": [
-    { title: "Diabetes & Complications", desc: "Holistic regulation of blood sugar and prevention of long-term complications." },
-    { title: "Hypertension & Blood Pressure", desc: "Balancing blood pressure through stress reduction and metabolic support." },
-    { title: "Thyroid & Hormonal Imbalance", desc: "Restoring endocrine harmony for sustained energy and vitality." },
-    { title: "Kidney & Gallbladder Stones", desc: "Natural dissolution support and targeted prevention of recurrence." },
-    { title: "Comprehensive Chronic Care", desc: "Tailored holistic approaches for diverse, stubborn health challenges." },
+    {
+      title: "Diabetes & Complications",
+      desc: "Holistic regulation of blood sugar and prevention of long-term complications.",
+    },
+    {
+      title: "Hypertension & Blood Pressure",
+      desc: "Balancing blood pressure through stress reduction and metabolic support.",
+    },
+    {
+      title: "Thyroid & Hormonal Imbalance",
+      desc: "Restoring endocrine harmony for sustained energy and vitality.",
+    },
+    {
+      title: "Kidney & Gallbladder Stones",
+      desc: "Natural dissolution support and targeted prevention of recurrence.",
+    },
+    {
+      title: "Comprehensive Chronic Care",
+      desc: "Tailored holistic approaches for diverse, stubborn health challenges.",
+    },
   ],
   "Women & Children": [
-    { title: "PCOS & Menstrual Health", desc: "Natural regulation of cycles, hormonal balance, and symptom relief." },
-    { title: "Infertility Support", desc: "Creating an optimal internal environment to gently support conception." },
-    { title: "General Women's Wellness", desc: "Comprehensive, natural support for female reproductive and intimate health." },
-    { title: "Pediatric Care & Behavior", desc: "Safe, gentle remedies supporting growing bodies and developing minds." },
+    {
+      title: "PCOS & Menstrual Health",
+      desc: "Natural regulation of cycles, hormonal balance, and symptom relief.",
+    },
+    {
+      title: "Infertility Support",
+      desc: "Creating an optimal internal environment to gently support conception.",
+    },
+    {
+      title: "General Women's Wellness",
+      desc: "Comprehensive, natural support for female reproductive and intimate health.",
+    },
+    {
+      title: "Pediatric Care & Behavior",
+      desc: "Safe, gentle remedies supporting growing bodies and developing minds.",
+    },
   ],
   "Pain & Digestion": [
-    { title: "Migraine & Headaches", desc: "Addressing root triggers for lasting relief and clear-headed vitality." },
-    { title: "Joint Pain & Arthritis", desc: "Reducing inflammation and restoring mobility through natural healing." },
-    { title: "Acidity, GERD & IBS", desc: "Healing the gut lining and restoring optimal, pain-free digestion." },
-    { title: "Piles & Constipation", desc: "Gentle, effective regulation and healing of the lower digestive tract." },
+    {
+      title: "Migraine & Headaches",
+      desc: "Addressing root triggers for lasting relief and clear-headed vitality.",
+    },
+    {
+      title: "Joint Pain & Arthritis",
+      desc: "Reducing inflammation and restoring mobility through natural healing.",
+    },
+    {
+      title: "Acidity, GERD & IBS",
+      desc: "Healing the gut lining and restoring optimal, pain-free digestion.",
+    },
+    {
+      title: "Piles & Constipation",
+      desc: "Gentle, effective regulation and healing of the lower digestive tract.",
+    },
   ],
   "Mind, Skin & Immunity": [
-    { title: "Sleep Disorders & Insomnia", desc: "Re-establishing natural circadian rhythms for deep, restorative rest." },
-    { title: "Depression, Anxiety & Stress", desc: "Restoring emotional equilibrium and calming an overactive nervous system." },
-    { title: "Skin Diseases", desc: "Healing from within to address eczema, psoriasis, acne, and rashes." },
-    { title: "Allergies & Sensitivities", desc: "Strengthening the body's natural defenses without reliance on medications." },
-    { title: "Tonsillitis & Sinusitis", desc: "Building resilience against acute and chronic respiratory infections." },
+    {
+      title: "Sleep Disorders & Insomnia",
+      desc: "Re-establishing natural circadian rhythms for deep, restorative rest.",
+    },
+    {
+      title: "Depression, Anxiety & Stress",
+      desc: "Restoring emotional equilibrium and calming an overactive nervous system.",
+    },
+    {
+      title: "Skin Diseases",
+      desc: "Healing from within to address eczema, psoriasis, acne, and rashes.",
+    },
+    {
+      title: "Allergies & Sensitivities",
+      desc: "Strengthening the body's natural defenses without reliance on medications.",
+    },
+    {
+      title: "Tonsillitis & Sinusitis",
+      desc: "Building resilience against acute and chronic respiratory infections.",
+    },
   ],
 };
 
@@ -71,8 +125,7 @@ export function Services() {
             className="font-serif text-white leading-[1.05]"
             style={{ fontSize: "clamp(32px, 6vw, 84px)" }}
           >
-            Treatments{" "}
-            <em className="italic font-light opacity-80">We Offer</em>
+            Treatments <em className="italic font-light opacity-80">We Offer</em>
           </h2>
         </motion.div>
 
@@ -93,23 +146,23 @@ export function Services() {
                         layoutId="active-pill"
                         className="absolute inset-0 rounded-full shadow-lg"
                         transition={{ type: "spring", bounce: 0.15, duration: 0.6 }}
-                        style={{ 
+                        style={{
                           background: "var(--color-emerald-glow)",
-                          border: "1px solid rgba(255,255,255,0.2)"
+                          border: "1px solid rgba(255,255,255,0.2)",
                         }}
                       />
                     )}
-                    
-                    <span 
+
+                    <span
                       className="relative z-10 font-mono text-[10px] sm:text-[11px] transition-colors"
-                      style={{ 
+                      style={{
                         opacity: isActive ? 1 : 0.6,
-                        color: isActive ? "var(--color-emerald-deep)" : "white" 
+                        color: isActive ? "var(--color-emerald-deep)" : "white",
                       }}
                     >
                       0{i + 1}
                     </span>
-                    
+
                     <span
                       className="relative z-10 whitespace-nowrap font-semibold transition-colors"
                       style={{

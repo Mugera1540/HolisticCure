@@ -1,7 +1,17 @@
 import logo from "../../assets/HC HOMEOPATHY LOGO FINAL-Photoroom.png";
 
 const InstagramIcon = ({ size = 20 }: { size?: number }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
@@ -9,7 +19,17 @@ const InstagramIcon = ({ size = 20 }: { size?: number }) => (
 );
 
 const FacebookIcon = ({ size = 20 }: { size?: number }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
   </svg>
 );
@@ -52,9 +72,9 @@ export function Footer() {
       <div className="container-luxe grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-16">
         <div>
           <div className="flex items-center gap-4 mb-6">
-            <img 
-              src={logo} 
-              alt="Holistic Cure Logo" 
+            <img
+              src={logo}
+              alt="Holistic Cure Logo"
               className="h-12 sm:h-16 w-auto object-contain"
             />
             <div className="flex flex-col leading-none">
@@ -128,13 +148,22 @@ export function Footer() {
             Services
           </p>
           <div className="flex flex-col gap-4">
-            <a href="/booking" className="text-white/40 hover:text-white transition-colors text-sm tracking-wide">
+            <a
+              href="/booking"
+              className="text-white/40 hover:text-white transition-colors text-sm tracking-wide"
+            >
               Book Appointment
             </a>
-            <a href="/courier" className="text-white/40 hover:text-white transition-colors text-sm tracking-wide">
+            <a
+              href="/courier"
+              className="text-white/40 hover:text-white transition-colors text-sm tracking-wide"
+            >
               Medicine Courier
             </a>
-            <a href="/#services" className="text-white/40 hover:text-white transition-colors text-sm tracking-wide">
+            <a
+              href="/#services"
+              className="text-white/40 hover:text-white transition-colors text-sm tracking-wide"
+            >
               Treatments We Offer
             </a>
           </div>

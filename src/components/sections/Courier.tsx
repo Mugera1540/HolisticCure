@@ -6,7 +6,17 @@ import courierBg from "../../assets/courier-bg.png";
 const CLINIC_PHONE = "919324625457";
 
 const TruckIcon = ({ size = 20 }: { size?: number }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
     <path d="M15 18H9" />
     <path d="M19 18h2a1 1 0 0 0 1-1v-5h-7v5a1 1 0 0 0 1 1h2" />
@@ -32,7 +42,7 @@ const schema = z.object({
     .trim()
     .length(6, "Pincode must be exactly 6 digits")
     .regex(/^\d+$/, "Pincode must contain only digits"),
-  agreed: z.boolean().refine(val => val === true, "You must acknowledge courier charges"),
+  agreed: z.boolean().refine((val) => val === true, "You must acknowledge courier charges"),
 });
 
 type FormState = z.infer<typeof schema>;
@@ -106,7 +116,7 @@ export function Courier() {
     e.preventDefault();
     const data = validate();
     if (!data) return;
-    
+
     const whatsappUrl = `https://wa.me/${CLINIC_PHONE}?text=${buildMessage(data)}`;
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
@@ -129,9 +139,7 @@ export function Courier() {
         className="absolute inset-0 w-full h-full object-cover opacity-70"
         style={{ filter: "blur(2px)" }}
       />
-      <div 
-        className="absolute inset-0 bg-gradient-to-b from-[var(--color-emerald-deep)] via-[rgba(4,15,12,0.6)] to-[var(--color-emerald-deep)]"
-      />
+      <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-emerald-deep)] via-[rgba(4,15,12,0.6)] to-[var(--color-emerald-deep)]" />
 
       {/* Background Accents */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--color-berry)]/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4" />
@@ -147,17 +155,19 @@ export function Courier() {
           >
             <div className="inline-flex items-center gap-3 text-[var(--color-berry)] mb-6 drop-shadow-lg">
               <TruckIcon />
-              <span className="uppercase tracking-[0.4em] text-[10px] font-bold">Courier Service</span>
+              <span className="uppercase tracking-[0.4em] text-[10px] font-bold">
+                Courier Service
+              </span>
             </div>
-            <h1 
+            <h1
               className="font-serif text-white mb-6 drop-shadow-2xl"
               style={{ fontSize: "clamp(36px, 8vw, 72px)" }}
             >
               Medicine <em className="italic font-light opacity-80">Dispatch</em>
             </h1>
             <p className="text-white/80 max-w-xl mx-auto text-sm sm:text-base leading-relaxed font-medium">
-              For our existing patients, we offer doorstep delivery of prescribed medicines. 
-              Fill in your details below and we'll calculate the shipping for you.
+              For our existing patients, we offer doorstep delivery of prescribed medicines. Fill in
+              your details below and we'll calculate the shipping for you.
             </p>
           </motion.div>
 
@@ -171,10 +181,14 @@ export function Courier() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
               {/* Patient Info */}
               <div className="space-y-10">
-                <h3 className="text-white/40 text-[11px] uppercase tracking-[0.3em] font-bold border-b border-white/20 pb-4">Patient Information</h3>
-                
+                <h3 className="text-white/40 text-[11px] uppercase tracking-[0.3em] font-bold border-b border-white/20 pb-4">
+                  Patient Information
+                </h3>
+
                 <div>
-                  <label className={labelBase} style={labelStyle}>Full Name *</label>
+                  <label className={labelBase} style={labelStyle}>
+                    Full Name *
+                  </label>
                   <input
                     type="text"
                     value={form.name}
@@ -182,11 +196,15 @@ export function Courier() {
                     className={fieldBase}
                     placeholder="Enter your name"
                   />
-                  {errors.name && <p className="mt-2 text-[11px] text-red-300 font-medium">{errors.name}</p>}
+                  {errors.name && (
+                    <p className="mt-2 text-[11px] text-red-300 font-medium">{errors.name}</p>
+                  )}
                 </div>
 
                 <div>
-                  <label className={labelBase} style={labelStyle}>WhatsApp Number *</label>
+                  <label className={labelBase} style={labelStyle}>
+                    WhatsApp Number *
+                  </label>
                   <input
                     type="tel"
                     value={form.phone}
@@ -194,11 +212,15 @@ export function Courier() {
                     className={fieldBase}
                     placeholder="+91 00000 00000"
                   />
-                  {errors.phone && <p className="mt-2 text-[11px] text-red-300 font-medium">{errors.phone}</p>}
+                  {errors.phone && (
+                    <p className="mt-2 text-[11px] text-red-300 font-medium">{errors.phone}</p>
+                  )}
                 </div>
 
                 <div>
-                  <label className={labelBase} style={labelStyle}>Medicines Required *</label>
+                  <label className={labelBase} style={labelStyle}>
+                    Medicines Required *
+                  </label>
                   <textarea
                     rows={4}
                     value={form.medicines}
@@ -206,16 +228,22 @@ export function Courier() {
                     className={`${fieldBase} resize-none`}
                     placeholder="List the medicines as prescribed by Dr. Anisa"
                   />
-                  {errors.medicines && <p className="mt-2 text-[11px] text-red-300 font-medium">{errors.medicines}</p>}
+                  {errors.medicines && (
+                    <p className="mt-2 text-[11px] text-red-300 font-medium">{errors.medicines}</p>
+                  )}
                 </div>
               </div>
 
               {/* Shipping Address */}
               <div className="space-y-10">
-                <h3 className="text-white/40 text-[11px] uppercase tracking-[0.3em] font-bold border-b border-white/20 pb-4">Shipping Destination</h3>
+                <h3 className="text-white/40 text-[11px] uppercase tracking-[0.3em] font-bold border-b border-white/20 pb-4">
+                  Shipping Destination
+                </h3>
 
                 <div>
-                  <label className={labelBase} style={labelStyle}>Pincode *</label>
+                  <label className={labelBase} style={labelStyle}>
+                    Pincode *
+                  </label>
                   <div className="relative">
                     <input
                       type="text"
@@ -231,11 +259,15 @@ export function Courier() {
                       </div>
                     )}
                   </div>
-                  {errors.pincode && <p className="mt-2 text-[11px] text-red-300 font-medium">{errors.pincode}</p>}
+                  {errors.pincode && (
+                    <p className="mt-2 text-[11px] text-red-300 font-medium">{errors.pincode}</p>
+                  )}
                 </div>
 
                 <div>
-                  <label className={labelBase} style={labelStyle}>Full Address *</label>
+                  <label className={labelBase} style={labelStyle}>
+                    Full Address *
+                  </label>
                   <textarea
                     rows={2}
                     value={form.address}
@@ -243,12 +275,16 @@ export function Courier() {
                     className={`${fieldBase} resize-none`}
                     placeholder="House No, Building, Street, Landmark"
                   />
-                  {errors.address && <p className="mt-2 text-[11px] text-red-300 font-medium">{errors.address}</p>}
+                  {errors.address && (
+                    <p className="mt-2 text-[11px] text-red-300 font-medium">{errors.address}</p>
+                  )}
                 </div>
 
                 <div className="grid grid-cols-2 gap-6">
                   <div>
-                    <label className={labelBase} style={labelStyle}>City *</label>
+                    <label className={labelBase} style={labelStyle}>
+                      City *
+                    </label>
                     <input
                       type="text"
                       value={form.city}
@@ -257,10 +293,14 @@ export function Courier() {
                       placeholder="Enter City"
                       readOnly={form.pincode.length === 6}
                     />
-                    {errors.city && <p className="mt-2 text-[11px] text-red-300 font-medium">{errors.city}</p>}
+                    {errors.city && (
+                      <p className="mt-2 text-[11px] text-red-300 font-medium">{errors.city}</p>
+                    )}
                   </div>
                   <div>
-                    <label className={labelBase} style={labelStyle}>State *</label>
+                    <label className={labelBase} style={labelStyle}>
+                      State *
+                    </label>
                     <input
                       type="text"
                       value={form.state}
@@ -269,7 +309,9 @@ export function Courier() {
                       placeholder="Enter State"
                       readOnly={form.pincode.length === 6}
                     />
-                    {errors.state && <p className="mt-2 text-[11px] text-red-300 font-medium">{errors.state}</p>}
+                    {errors.state && (
+                      <p className="mt-2 text-[11px] text-red-300 font-medium">{errors.state}</p>
+                    )}
                   </div>
                 </div>
 
@@ -282,17 +324,35 @@ export function Courier() {
                         onChange={(e) => setForm({ ...form, agreed: e.target.checked })}
                         className="sr-only"
                       />
-                      <div className={`w-5 h-5 rounded border transition-colors flex items-center justify-center ${
-                        form.agreed ? "bg-[var(--color-berry)] border-[var(--color-berry)]" : "border-white/30 group-hover:border-white/60"
-                      }`}>
-                        {form.agreed && <svg width={12} height={12} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4"><path d="M20 6L9 17L4 12" /></svg>}
+                      <div
+                        className={`w-5 h-5 rounded border transition-colors flex items-center justify-center ${
+                          form.agreed
+                            ? "bg-[var(--color-berry)] border-[var(--color-berry)]"
+                            : "border-white/30 group-hover:border-white/60"
+                        }`}
+                      >
+                        {form.agreed && (
+                          <svg
+                            width={12}
+                            height={12}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="white"
+                            strokeWidth="4"
+                          >
+                            <path d="M20 6L9 17L4 12" />
+                          </svg>
+                        )}
                       </div>
                     </div>
                     <span className="text-[11px] text-white/70 leading-relaxed select-none font-medium">
-                      I understand that courier charges will be calculated and added to the total cost based on my location. *
+                      I understand that courier charges will be calculated and added to the total
+                      cost based on my location. *
                     </span>
                   </label>
-                  {errors.agreed && <p className="mt-2 text-[11px] text-red-300 font-medium">{errors.agreed}</p>}
+                  {errors.agreed && (
+                    <p className="mt-2 text-[11px] text-red-300 font-medium">{errors.agreed}</p>
+                  )}
                 </div>
               </div>
             </div>
@@ -304,7 +364,9 @@ export function Courier() {
               >
                 <span className="relative z-10 flex items-center gap-3">
                   Submit & Open WhatsApp
-                  <span className="transition-transform duration-500 group-hover:translate-x-2">→</span>
+                  <span className="transition-transform duration-500 group-hover:translate-x-2">
+                    →
+                  </span>
                 </span>
               </button>
             </div>

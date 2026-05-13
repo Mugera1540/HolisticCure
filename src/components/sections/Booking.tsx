@@ -6,27 +6,62 @@ import dropletImg from "../../assets/droplet.jpg";
 const CLINIC_PHONE = "919324625457";
 
 const PhoneIcon = ({ size = 12 }: { size?: number }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
   </svg>
 );
 
 const WhatsAppIcon = ({ size = 14 }: { size?: number }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
   </svg>
 );
 
 const MailIcon = ({ size = 14 }: { size?: number }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <rect width="20" height="16" x="2" y="4" rx="2" />
     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
   </svg>
 );
 
-
 const ChevronDownIcon = ({ size = 14 }: { size?: number }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d="m6 9 6 6 6-6" />
   </svg>
 );
@@ -47,8 +82,12 @@ const schema = z.object({
     .min(7, "Enter a valid phone number")
     .max(20)
     .regex(/^[+\d\s\-()]+$/, "Only digits, spaces and + - ( ) allowed"),
-  type: z.string({ required_error: "Please select consultation mode" }).min(1, "Please select consultation mode"),
-  slot: z.string({ required_error: "Please select preferred time" }).min(1, "Please select preferred time"),
+  type: z
+    .string({ required_error: "Please select consultation mode" })
+    .min(1, "Please select consultation mode"),
+  slot: z
+    .string({ required_error: "Please select preferred time" })
+    .min(1, "Please select preferred time"),
   note: z.string().trim().max(500, "Please keep under 500 characters").optional(),
 });
 
@@ -97,7 +136,6 @@ export function Booking() {
       "noopener,noreferrer",
     );
   };
-
 
   const fieldBase =
     "w-full bg-transparent border-b border-white/20 focus:border-[var(--color-gold)] outline-none text-white placeholder-white/40 py-3 transition-colors text-base";
@@ -168,8 +206,8 @@ export function Booking() {
             className="mt-6 sm:mt-8 text-white/60 max-w-xl mx-auto text-sm sm:text-base"
             style={{ lineHeight: 1.7 }}
           >
-            Share a few details and Dr. Anisa's team will confirm your consultation
-            within hours — via WhatsApp.
+            Share a few details and Dr. Anisa's team will confirm your consultation within hours —
+            via WhatsApp.
           </p>
         </div>
 
@@ -193,9 +231,7 @@ export function Booking() {
               maxLength={80}
               aria-invalid={!!errors.name}
             />
-            {errors.name && (
-              <p className="mt-2 text-xs text-red-300/90">{errors.name}</p>
-            )}
+            {errors.name && <p className="mt-2 text-xs text-red-300/90">{errors.name}</p>}
           </div>
 
           <div>
@@ -213,9 +249,7 @@ export function Booking() {
               maxLength={20}
               aria-invalid={!!errors.phone}
             />
-            {errors.phone && (
-              <p className="mt-2 text-xs text-red-300/90">{errors.phone}</p>
-            )}
+            {errors.phone && <p className="mt-2 text-xs text-red-300/90">{errors.phone}</p>}
           </div>
 
           <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
@@ -232,7 +266,9 @@ export function Booking() {
                   style={{ colorScheme: "dark" }}
                   aria-invalid={!!errors.type}
                 >
-                  <option value="" disabled className="text-white/20">Select Mode...</option>
+                  <option value="" disabled className="text-white/20">
+                    Select Mode...
+                  </option>
                   {CONSULTATION_TYPES.map((t) => (
                     <option key={t} value={t} className="bg-[var(--color-emerald-deep)]">
                       {t}
@@ -243,9 +279,7 @@ export function Booking() {
                   <ChevronDownIcon />
                 </div>
               </div>
-              {errors.type && (
-                <p className="mt-2 text-xs text-red-300/90">{errors.type}</p>
-              )}
+              {errors.type && <p className="mt-2 text-xs text-red-300/90">{errors.type}</p>}
             </div>
 
             <div>
@@ -261,7 +295,9 @@ export function Booking() {
                   style={{ colorScheme: "dark" }}
                   aria-invalid={!!errors.slot}
                 >
-                  <option value="" disabled className="text-white/20">Select Time...</option>
+                  <option value="" disabled className="text-white/20">
+                    Select Time...
+                  </option>
                   {TIME_SLOTS.map((s) => (
                     <option key={s} value={s} className="bg-[var(--color-emerald-deep)]">
                       {s}
@@ -272,9 +308,7 @@ export function Booking() {
                   <ChevronDownIcon />
                 </div>
               </div>
-              {errors.slot && (
-                <p className="mt-2 text-xs text-red-300/90">{errors.slot}</p>
-              )}
+              {errors.slot && <p className="mt-2 text-xs text-red-300/90">{errors.slot}</p>}
             </div>
           </div>
 
@@ -292,12 +326,8 @@ export function Booking() {
               maxLength={500}
               aria-invalid={!!errors.note}
             />
-            {errors.note && (
-              <p className="mt-2 text-xs text-red-300/90">{errors.note}</p>
-            )}
-            <p className="mt-2 text-right text-white/30 text-xs">
-              {form.note?.length ?? 0}/500
-            </p>
+            {errors.note && <p className="mt-2 text-xs text-red-300/90">{errors.note}</p>}
+            <p className="mt-2 text-right text-white/30 text-xs">{form.note?.length ?? 0}/500</p>
           </div>
 
           <div className="md:col-span-2 mt-2 sm:mt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-5">
@@ -331,7 +361,10 @@ export function Booking() {
               <MailIcon size={12} />
               <span>
                 Email:{" "}
-                <a href="mailto:dr.anisaa.shaikh@gmail.com" className="text-white/70 hover:text-white">
+                <a
+                  href="mailto:dr.anisaa.shaikh@gmail.com"
+                  className="text-white/70 hover:text-white"
+                >
                   dr.anisaa.shaikh@gmail.com
                 </a>
               </span>
@@ -349,18 +382,21 @@ function MapSection() {
   return (
     <div className="mt-24 sm:mt-32 border-t border-white/5 pt-20 sm:pt-24">
       <div className="text-center mb-12 sm:mb-16">
-        <h3 
+        <h3
           className="font-serif font-light text-white mb-4"
           style={{ fontSize: "clamp(28px, 5vw, 48px)" }}
         >
-          Our <em className="italic font-bold" style={{ color: "var(--color-gold)" }}>Locations.</em>
+          Our{" "}
+          <em className="italic font-bold" style={{ color: "var(--color-gold)" }}>
+            Locations.
+          </em>
         </h3>
         <p className="text-white/40 uppercase tracking-[0.3em] text-[10px]">Mumbai & Indore</p>
       </div>
-      
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
         {/* Mumbai Map */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -368,36 +404,36 @@ function MapSection() {
           className="bg-white/[0.03] p-5 sm:p-6 rounded-sm border border-white/10"
         >
           <div className="aspect-[16/10] sm:aspect-video w-full rounded-sm overflow-hidden grayscale contrast-[1.1] brightness-[0.8] hover:grayscale-0 transition-all duration-1000 group">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.852494056247!2d72.88470777595568!3d19.060173382133276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c87c93673751%3A0x6e76cf0bc6488d7!2sManju%20Nursing%20Home!5e0!3m2!1sen!2sin!4v1715574400000!5m2!1sen!2sin" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen 
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.852494056247!2d72.88470777595568!3d19.060173382133276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c87c93673751%3A0x6e76cf0bc6488d7!2sManju%20Nursing%20Home!5e0!3m2!1sen!2sin!4v1715574400000!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
               loading="lazy"
               title="Mumbai Clinic Location"
             />
           </div>
           <div className="mt-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
-             <div>
-                <h4 className="text-white font-medium mb-2 tracking-wide">Mumbai Clinic</h4>
-                <p className="text-white/40 text-xs leading-relaxed max-w-[240px]">
-                  Manju Nursing Home, Sindhi Society, Chembur, Mumbai - 400071
-                </p>
-             </div>
-             <a 
-               href="https://www.google.com/maps/search/?api=1&query=Manju+Nursing+Home+Chembur+Mumbai" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               className="text-[10px] text-[var(--color-gold)] uppercase tracking-[0.2em] border-b border-[var(--color-gold)]/30 pb-1 hover:border-[var(--color-gold)] transition-colors"
-             >
-               Get Directions
-             </a>
+            <div>
+              <h4 className="text-white font-medium mb-2 tracking-wide">Mumbai Clinic</h4>
+              <p className="text-white/40 text-xs leading-relaxed max-w-[240px]">
+                Manju Nursing Home, Sindhi Society, Chembur, Mumbai - 400071
+              </p>
+            </div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Manju+Nursing+Home+Chembur+Mumbai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] text-[var(--color-gold)] uppercase tracking-[0.2em] border-b border-[var(--color-gold)]/30 pb-1 hover:border-[var(--color-gold)] transition-colors"
+            >
+              Get Directions
+            </a>
           </div>
         </motion.div>
 
         {/* Indore Map */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -405,35 +441,34 @@ function MapSection() {
           className="bg-white/[0.03] p-5 sm:p-6 rounded-sm border border-white/10"
         >
           <div className="aspect-[16/10] sm:aspect-video w-full rounded-sm overflow-hidden grayscale contrast-[1.1] brightness-[0.8] hover:grayscale-0 transition-all duration-1000 group">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.529241957241!2d75.89389277592473!3d22.755225182183276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd0012345678%3A0x1234567890abcdef!2sOm%20Gurudev%20Complex!5e0!3m2!1sen!2sin!4v1715574500000!5m2!1sen!2sin" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen 
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.529241957241!2d75.89389277592473!3d22.755225182183276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd0012345678%3A0x1234567890abcdef!2sOm%20Gurudev%20Complex!5e0!3m2!1sen!2sin!4v1715574500000!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
               loading="lazy"
               title="Indore Clinic Location"
             />
           </div>
           <div className="mt-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
-             <div>
-                <h4 className="text-white font-medium mb-2 tracking-wide">Indore Clinic</h4>
-                <p className="text-white/40 text-xs leading-relaxed max-w-[240px]">
-                  Om Gurudev Complex, Scheme no 54, Vijay Nagar, Indore
-                </p>
-             </div>
-             <a 
-               href="https://www.google.com/maps/search/?api=1&query=Om+Gurudev+Complex+Scheme+no+54+Indore" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               className="text-[10px] text-[var(--color-gold)] uppercase tracking-[0.2em] border-b border-[var(--color-gold)]/30 pb-1 hover:border-[var(--color-gold)] transition-colors"
-             >
-               Get Directions
-             </a>
+            <div>
+              <h4 className="text-white font-medium mb-2 tracking-wide">Indore Clinic</h4>
+              <p className="text-white/40 text-xs leading-relaxed max-w-[240px]">
+                Om Gurudev Complex, Scheme no 54, Vijay Nagar, Indore
+              </p>
+            </div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Om+Gurudev+Complex+Scheme+no+54+Indore"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] text-[var(--color-gold)] uppercase tracking-[0.2em] border-b border-[var(--color-gold)]/30 pb-1 hover:border-[var(--color-gold)] transition-colors"
+            >
+              Get Directions
+            </a>
           </div>
         </motion.div>
       </div>
     </div>
   );
 }
-

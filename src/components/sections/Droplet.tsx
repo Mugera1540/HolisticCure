@@ -50,10 +50,7 @@ export function Droplet() {
         >
           ONE DROP.
           <br />
-          <em
-            className="italic font-bold"
-            style={{ color: "var(--color-emerald-glow)" }}
-          >
+          <em className="italic font-bold" style={{ color: "var(--color-emerald-glow)" }}>
             INFINITE HEALING.
           </em>
         </h2>
