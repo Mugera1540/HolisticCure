@@ -362,10 +362,10 @@ export function Booking() {
               <span>
                 Email:{" "}
                 <a
-                  href="mailto:dr.anisaa.shaikh@gmail.com"
+                  href="mailto:holistic.cure26@gmail.com"
                   className="text-white/70 hover:text-white"
                 >
-                  dr.anisaa.shaikh@gmail.com
+                  holistic.cure26@gmail.com
                 </a>
               </span>
             </div>

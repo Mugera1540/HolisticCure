@@ -126,7 +126,7 @@ export function Footer() {
               <WhatsAppIcon size={20} />
             </a>
             <a
-              href="mailto:dr.anisaa.shaikh@gmail.com"
+              href="mailto:holistic.cure26@gmail.com"
               className="text-white/40 hover:text-[var(--color-gold)] transition-colors p-2"
               aria-label="Send us an Email"
             >

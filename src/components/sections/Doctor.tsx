@@ -144,11 +144,11 @@ export function Doctor() {
                     Email
                   </p>
                   <a
-                    href="mailto:dr.anisaa.shaikh@gmail.com"
+                    href="mailto:holistic.cure26@gmail.com"
                     className="text-xs sm:text-sm hover:text-emerald-600 transition-colors"
                     style={{ color: "var(--color-ink-soft)" }}
                   >
-                    dr.anisaa.shaikh@gmail.com
+                    holistic.cure26@gmail.com
                   </a>
                 </div>
               </div>
