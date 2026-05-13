@@ -20,7 +20,7 @@ const jsonLd = {
     "Premium homeopathy clinic providing natural, side-effect-free treatments for chronic diseases, skin disorders, respiratory issues, women's wellness, and mental health in Mumbai and Indore.",
   url: "https://holisticcure.in",
   telephone: "+919324625457",
-  email: "info@holisticcure.in",
+  email: "holistic.cure26@gmail.com",
   address: [
     {
       "@type": "PostalAddress",
