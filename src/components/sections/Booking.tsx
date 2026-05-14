@@ -439,7 +439,8 @@ function MapSection() {
                   Mumbai Clinic
                 </h4>
                 <p className="text-white/40 text-xs leading-relaxed max-w-[240px]">
-                  Ground floor, Manju Nursing Home, opposite Bhakti Bhavan next to Sitla Hospital, Sindhi society Chembur Mumbai - 400071
+                  Ground floor, Manju Nursing Home, opposite Bhakti Bhavan next to Sitla Hospital,
+                  Sindhi society Chembur Mumbai - 400071
                 </p>
               </div>
               <div className="flex justify-start sm:justify-end">
@@ -482,7 +483,8 @@ function MapSection() {
                   Indore Clinic
                 </h4>
                 <p className="text-white/40 text-xs leading-relaxed max-w-[240px]">
-                  G -04, Om Gurudev Complex, Scheme no 54, Oppo Appolo Hospital, below SBI bank, Indore (MP)
+                  G -04, Om Gurudev Complex, Scheme no 54, Oppo Appolo Hospital, below SBI bank,
+                  Indore (MP)
                 </p>
               </div>
               <div className="flex justify-start sm:justify-end">

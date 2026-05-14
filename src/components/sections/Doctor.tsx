@@ -105,50 +105,77 @@ export function Doctor() {
           </div>
 
           <div
-            className="mt-8 sm:mt-10 pt-6 sm:pt-8 space-y-5"
+            className="mt-8 sm:mt-10 pt-6 sm:pt-8 space-y-6"
             style={{ borderTop: "1px solid rgba(26, 122, 110, 0.15)" }}
           >
+            {/* Mumbai Section */}
             <div className="flex items-start gap-3">
               <span
                 className="inline-block w-2 h-2 rounded-full mt-2 shrink-0"
                 style={{ background: "var(--color-emerald-main)" }}
               />
-              <div className="space-y-4">
-                <div>
-                  <p
-                    className="text-[11px] uppercase tracking-wider font-semibold mb-1"
-                    style={{ color: "var(--color-emerald-main)" }}
-                  >
-                    Mumbai Clinic
-                  </p>
-                  <p className="text-xs sm:text-sm" style={{ color: "var(--color-ink-soft)" }}>
-                    Ground floor, Manju Nursing Home, opposite Bhakti Bhavan next to Sitla Hospital, Sindhi society Chembur Mumbai - 400071
-                  </p>
-                </div>
-                <div>
-                  <p
-                    className="text-[11px] uppercase tracking-wider font-semibold mb-1"
-                    style={{ color: "var(--color-emerald-main)" }}
-                  >
-                    Indore Clinic
-                  </p>
-                  <p className="text-xs sm:text-sm" style={{ color: "var(--color-ink-soft)" }}>
-                    G -04, Om Gurudev Complex, Scheme no 54, Oppo Appolo Hospital, below SBI bank, Indore (MP)
-                  </p>
-                </div>
-                <div>
-                  <p
-                    className="text-[11px] uppercase tracking-wider font-semibold mb-1"
-                    style={{ color: "var(--color-emerald-main)" }}
-                  >
-                    Email
-                  </p>
+              <div>
+                <p
+                  className="text-[11px] uppercase tracking-wider font-semibold mb-1"
+                  style={{ color: "var(--color-emerald-main)" }}
+                >
+                  Mumbai Clinic
+                </p>
+                <p className="text-xs sm:text-sm" style={{ color: "var(--color-ink-soft)" }}>
+                  Ground floor, Manju Nursing Home, opposite Bhakti Bhavan next to Sitla Hospital,
+                  Sindhi society Chembur Mumbai - 400071
+                </p>
+              </div>
+            </div>
+
+            {/* Indore Section */}
+            <div className="flex items-start gap-3">
+              <span
+                className="inline-block w-2 h-2 rounded-full mt-2 shrink-0"
+                style={{ background: "var(--color-emerald-main)" }}
+              />
+              <div>
+                <p
+                  className="text-[11px] uppercase tracking-wider font-semibold mb-1"
+                  style={{ color: "var(--color-emerald-main)" }}
+                >
+                  Indore Clinic
+                </p>
+                <p className="text-xs sm:text-sm" style={{ color: "var(--color-ink-soft)" }}>
+                  G -04, Om Gurudev Complex, Scheme no 54, Oppo Appolo Hospital, below SBI bank,
+                  Indore (MP)
+                </p>
+              </div>
+            </div>
+
+            {/* Contact Section */}
+            <div className="flex items-start gap-3">
+              <span
+                className="inline-block w-2 h-2 rounded-full mt-2 shrink-0"
+                style={{ background: "var(--color-emerald-main)" }}
+              />
+              <div>
+                <p
+                  className="text-[11px] uppercase tracking-wider font-semibold mb-1"
+                  style={{ color: "var(--color-emerald-main)" }}
+                >
+                  Contact Info
+                </p>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                   <a
                     href="mailto:holistic.cure26@gmail.com"
-                    className="text-xs sm:text-sm hover:text-emerald-600 transition-colors"
+                    className="text-xs sm:text-sm hover:text-emerald-600 transition-colors underline decoration-emerald-200"
                     style={{ color: "var(--color-ink-soft)" }}
                   >
                     holistic.cure26@gmail.com
+                  </a>
+                  <span className="hidden sm:inline text-emerald-200">|</span>
+                  <a
+                    href="tel:+919324625457"
+                    className="text-xs sm:text-sm hover:text-emerald-600 transition-colors font-medium"
+                    style={{ color: "var(--color-ink-soft)" }}
+                  >
+                    +91 93246 25457
                   </a>
                 </div>
               </div>

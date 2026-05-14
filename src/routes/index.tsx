@@ -24,14 +24,16 @@ const jsonLd = {
   address: [
     {
       "@type": "PostalAddress",
-      streetAddress: "Ground floor, Manju Nursing Home, opposite Bhakti Bhavan next to Sitla Hospital, Sindhi society Chembur",
+      streetAddress:
+        "Ground floor, Manju Nursing Home, opposite Bhakti Bhavan next to Sitla Hospital, Sindhi society Chembur",
       addressLocality: "Mumbai",
       postalCode: "400071",
       addressCountry: "IN",
     },
     {
       "@type": "PostalAddress",
-      streetAddress: "G -04, Om Gurudev Complex, Scheme no 54, Oppo Appolo Hospital, below SBI bank",
+      streetAddress:
+        "G -04, Om Gurudev Complex, Scheme no 54, Oppo Appolo Hospital, below SBI bank",
       addressLocality: "Indore",
       addressRegion: "MP",
       addressCountry: "IN",
