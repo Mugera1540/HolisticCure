@@ -41,6 +41,7 @@ const links = [
   { label: "Home", href: "/#hero" },
   { label: "Services", href: "/#services" },
   { label: "Our Doctor", href: "/#doctor" },
+  { label: "Real Stories", href: "/#testimonials" },
   { label: "Medicine Courier", href: "/courier" },
 ];
 
