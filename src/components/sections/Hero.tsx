@@ -104,35 +104,94 @@ export function Hero() {
         <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3c.5.12 1 .2 1.5.2C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z" />
       </svg>
 
-      <div className="container-luxe relative z-10 text-center max-w-[860px] px-4 sm:px-6">
+      <div className="container-luxe relative z-10 text-center max-w-[960px] px-4 sm:px-6">
+        {/* Eyebrow label */}
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          style={{
+            fontSize: "11px",
+            letterSpacing: "0.35em",
+            textTransform: "uppercase",
+            color: "var(--color-gold)",
+          }}
+        >
+          Dr. Anisa's Holistic Cure
+        </motion.p>
+
+        {/* Main Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          className="font-serif text-white leading-[0.95] tracking-tight mt-6 sm:mt-8"
+          style={{ fontSize: "clamp(48px, 12vw, 148px)" }}
+        >
+          <span className="font-light italic" style={{ color: "var(--color-emerald-glow)" }}>
+            Homeopathy
+          </span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="font-serif font-light text-white leading-[0.95] tracking-tight"
-          style={{ fontSize: "clamp(42px, 10vw, 132px)" }}
+          style={{ fontSize: "clamp(32px, 7vw, 84px)" }}
         >
           Healing{" "}
           <em className="font-light italic" style={{ color: "var(--color-emerald-glow)" }}>
             From
-          </em>
-          <br />
+          </em>{" "}
           <span className="font-semibold">Within.</span>
-        </motion.h1>
+        </motion.p>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.6 }}
+          transition={{ duration: 0.9, delay: 0.7 }}
           className="mt-6 sm:mt-8 text-white/60 mx-auto max-w-xl px-2"
-          style={{ fontSize: "clamp(16px, 2.5vw, 22px)", lineHeight: 1.7, fontWeight: 300 }}
+          style={{ fontSize: "clamp(15px, 2.5vw, 22px)", lineHeight: 1.7, fontWeight: 300 }}
         >
           The white pills that lead to a colourful life
-        </motion.p>{" "}
+        </motion.p>
+
+        {/* Trust Badges */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.85 }}
+          className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-6"
+        >
+          {[
+            { icon: "⭐", text: "4.9 Google Rating" },
+            { icon: "🩺", text: "5000+ Patients" },
+            { icon: "📍", text: "Mumbai & Indore" },
+          ].map((badge) => (
+            <span
+              key={badge.text}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-white/50"
+              style={{
+                fontSize: "clamp(10px, 2vw, 12px)",
+                letterSpacing: "0.12em",
+                background: "rgba(255,255,255,0.05)",
+                border: "1px solid rgba(255,255,255,0.08)",
+                backdropFilter: "blur(8px)",
+              }}
+            >
+              <span>{badge.icon}</span>
+              {badge.text}
+            </span>
+          ))}
+        </motion.div>
+
+        {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.8 }}
-          className="mt-12 sm:mt-16 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 px-4"
+          transition={{ duration: 0.9, delay: 1.0 }}
+          className="mt-10 sm:mt-14 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 px-4"
         >
           <a
             href="/booking"
