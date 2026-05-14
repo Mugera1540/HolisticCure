@@ -77,7 +77,7 @@ export function Hero() {
       />
 
       {/* 3D Droplet */}
-      <div className="absolute inset-0 pointer-events-none opacity-80">
+      <div className="absolute inset-0 pointer-events-none opacity-40">
         <Suspense fallback={null}>
           <Hero3D />
         </Suspense>
@@ -110,11 +110,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
+          className="font-bold"
           style={{
-            fontSize: "11px",
+            fontSize: "clamp(12px, 2.5vw, 15px)",
             letterSpacing: "0.35em",
             textTransform: "uppercase",
             color: "var(--color-gold)",
+            textShadow: "0 0 20px rgba(212, 175, 55, 0.4)",
           }}
         >
           Dr. Anisa's Holistic Cure
@@ -126,9 +128,15 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="font-serif text-white leading-[0.95] tracking-tight mt-6 sm:mt-8"
-          style={{ fontSize: "clamp(48px, 12vw, 148px)" }}
+          style={{ fontSize: "clamp(48px, 12vw, 148px)", textShadow: "0 4px 40px rgba(0,0,0,0.6)" }}
         >
-          <span className="font-light italic" style={{ color: "var(--color-emerald-glow)" }}>
+          <span
+            className="font-light italic"
+            style={{
+              color: "var(--color-emerald-glow)",
+              textShadow: "0 0 60px rgba(164, 232, 202, 0.35)",
+            }}
+          >
             Homeopathy
           </span>
         </motion.h1>
@@ -138,7 +146,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="font-serif font-light text-white leading-[0.95] tracking-tight"
-          style={{ fontSize: "clamp(32px, 7vw, 84px)" }}
+          style={{ fontSize: "clamp(32px, 7vw, 84px)", textShadow: "0 4px 30px rgba(0,0,0,0.5)" }}
         >
           Healing{" "}
           <em className="font-light italic" style={{ color: "var(--color-emerald-glow)" }}>
@@ -165,19 +173,19 @@ export function Hero() {
           className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-6"
         >
           {[
-            { icon: "⭐", text: "4.9 Google Rating" },
-            { icon: "🩺", text: "5000+ Patients" },
+            { icon: "⭐", text: "5.0 Google Rating" },
+            { icon: "🩺", text: "500+ Patients Healed" },
             { icon: "📍", text: "Mumbai & Indore" },
           ].map((badge) => (
             <span
               key={badge.text}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-white/50"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-white/70"
               style={{
-                fontSize: "clamp(10px, 2vw, 12px)",
+                fontSize: "clamp(11px, 2vw, 13px)",
                 letterSpacing: "0.12em",
-                background: "rgba(255,255,255,0.05)",
-                border: "1px solid rgba(255,255,255,0.08)",
-                backdropFilter: "blur(8px)",
+                background: "rgba(255,255,255,0.1)",
+                border: "1px solid rgba(255,255,255,0.15)",
+                backdropFilter: "blur(12px)",
               }}
             >
               <span>{badge.icon}</span>
