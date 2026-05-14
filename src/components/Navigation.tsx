@@ -78,7 +78,10 @@ export function Navigation() {
           scrolled ? "glass-nav" : "bg-transparent"
         }`}
       >
-        <nav className="container-luxe flex items-center justify-between py-3 sm:py-4">
+        <nav
+          aria-label="Main navigation"
+          className="container-luxe flex items-center justify-between py-3 sm:py-4"
+        >
           <a href="/#hero" className="flex items-center gap-5 group">
             <div className="relative w-20 sm:w-28 h-12 sm:h-14 flex items-center justify-center">
               <img

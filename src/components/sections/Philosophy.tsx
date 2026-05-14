@@ -158,7 +158,8 @@ export function Philosophy() {
                   <div className="aspect-[4/5] sm:aspect-square rounded-sm overflow-hidden shadow-2xl relative group">
                     <img
                       src={homeopathyDetails}
-                      alt="Homeopathic Remedies"
+                      alt="Homeopathic remedies and natural medicine preparations used at Holistic Cure clinic"
+                      loading="lazy"
                       className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-transparent to-transparent opacity-60" />

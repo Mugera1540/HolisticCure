@@ -131,20 +131,21 @@ export function Services() {
 
         {/* Enhanced Tab Switcher */}
         <div className="mt-12 sm:mt-20 flex justify-center">
-          <div className="inline-flex items-center p-1.5 sm:p-2 glass-dark rounded-full overflow-x-auto scrollbar-none max-w-full">
-            <div className="flex items-center gap-1 sm:gap-2 min-w-max">
+          <div className="inline-flex items-center p-1.5 sm:p-2 glass-dark rounded-2xl sm:rounded-full overflow-x-auto scrollbar-none max-w-full">
+            <div className="grid grid-cols-2 sm:flex sm:items-center gap-1 sm:gap-2 min-w-max">
               {tabs.map((t, i) => {
                 const isActive = active === t;
                 return (
                   <button
                     key={t}
                     onClick={() => setActive(t)}
-                    className="relative px-6 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 flex items-center gap-3 group outline-none cursor-pointer"
+                    aria-pressed={isActive}
+                    className="relative px-4 sm:px-10 py-3.5 sm:py-4 rounded-xl sm:rounded-full transition-all duration-300 flex items-center justify-center sm:justify-start gap-2 sm:gap-3 group outline-none cursor-pointer min-h-[48px]"
                   >
                     {isActive && (
                       <motion.div
                         layoutId="active-pill"
-                        className="absolute inset-0 rounded-full shadow-lg"
+                        className="absolute inset-0 rounded-xl sm:rounded-full shadow-lg"
                         transition={{ type: "spring", bounce: 0.15, duration: 0.6 }}
                         style={{
                           background: "var(--color-emerald-glow)",
@@ -166,7 +167,7 @@ export function Services() {
                     <span
                       className="relative z-10 whitespace-nowrap font-semibold transition-colors"
                       style={{
-                        fontSize: "12px",
+                        fontSize: "11px",
                         letterSpacing: "0.18em",
                         textTransform: "uppercase",
                         color: isActive ? "var(--color-emerald-deep)" : "rgba(255,255,255,0.7)",

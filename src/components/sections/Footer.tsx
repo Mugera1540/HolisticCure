@@ -135,7 +135,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div>
+        <nav aria-label="Footer navigation">
           <p
             className="mb-8 sm:mb-10"
             style={{
@@ -167,7 +167,7 @@ export function Footer() {
               Treatments We Offer
             </a>
           </div>
-        </div>
+        </nav>
 
         <div>
           <p
@@ -183,7 +183,7 @@ export function Footer() {
           </p>
 
           <div className="space-y-8">
-            <div>
+            <address className="not-italic">
               <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/60 mb-3 font-medium">
                 Mumbai Clinic
               </h4>
@@ -194,9 +194,9 @@ export function Footer() {
                 <br />
                 Sindhi society Chembur Mumbai - 400071
               </p>
-            </div>
+            </address>
 
-            <div>
+            <address className="not-italic">
               <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/60 mb-3 font-medium">
                 Indore Clinic
               </h4>
@@ -207,7 +207,7 @@ export function Footer() {
                 <br />
                 Indore (MP)
               </p>
-            </div>
+            </address>
           </div>
 
           <a

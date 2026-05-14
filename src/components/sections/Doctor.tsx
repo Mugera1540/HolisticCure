@@ -39,7 +39,8 @@ export function Doctor() {
           <div className="overflow-hidden relative aspect-[2/3] sm:aspect-[3/4.5] rounded-sm shadow-soft ring-1 ring-emerald-900/5">
             <img
               src={drImg}
-              alt="Dr. Anisa Shaikh — Homeopath"
+              alt="Dr. Anisa Shaikh — Best Homeopathy Doctor in Mumbai and Indore"
+              loading="lazy"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
             />
           </div>

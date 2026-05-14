@@ -80,10 +80,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Experience world-class homeopathic healing at Dr. Anisa's Holistic Cure clinics in Mumbai and Indore. Natural, side-effect-free treatments for chronic diseases, skin disorders, respiratory issues, women's wellness, and mental health.",
       },
+      {
+        name: "keywords",
+        content:
+          "homeopathy, homeopathy clinic Mumbai, homeopathy Chembur, best homeopath Mumbai, homeopathy clinic Indore, Dr Anisa, Holistic Cure, natural healing, chronic disease treatment, skin disorder homeopathy, women wellness homeopathy, PCOS homeopathy, thyroid homeopathy, pediatric homeopathy",
+      },
       { name: "author", content: "Dr. Anisa Shaikh" },
-      { name: "robots", content: "index, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
       { name: "theme-color", content: "#040f0c" },
-      { property: "og:title", content: "Dr. Anisa's Holistic Cure — Premium Homeopathy Clinic" },
+      { name: "format-detection", content: "telephone=yes" },
+      { name: "geo.region", content: "IN-MH" },
+      { name: "geo.placename", content: "Mumbai" },
+      { name: "geo.position", content: "19.0528;72.8912" },
+      { name: "ICBM", content: "19.0528, 72.8912" },
+      {
+        property: "og:title",
+        content: "Dr. Anisa's Holistic Cure — Best Homeopathy Clinic in Mumbai & Indore",
+      },
       {
         property: "og:description",
         content:
@@ -92,8 +105,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://holisticcure.in" },
       { property: "og:locale", content: "en_IN" },
+      { property: "og:site_name", content: "Holistic Cure" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Dr. Anisa's Holistic Cure — Premium Homeopathy" },
+      { name: "twitter:title", content: "Dr. Anisa's Holistic Cure — Best Homeopathy Clinic" },
       {
         name: "twitter:description",
         content:
@@ -106,8 +120,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: faviconUrl,
       },
       {
+        rel: "apple-touch-icon",
+        href: logoUrl,
+      },
+      {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
       },
     ],
   }),
