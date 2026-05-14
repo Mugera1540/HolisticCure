@@ -417,7 +417,7 @@ function MapSection() {
           className="group h-full"
         >
           <a
-            href="https://www.google.com/maps/search/?api=1&query=Manju+Nursing+Home+Chembur+Mumbai"
+            href="https://maps.app.goo.gl/XZk4sxd91NXbbBg39"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col h-full bg-white/[0.03] p-5 sm:p-6 rounded-sm border border-white/10 hover:border-[var(--color-gold)]/50 transition-all duration-500 hover:bg-white/[0.05]"
