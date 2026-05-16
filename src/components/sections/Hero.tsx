@@ -37,11 +37,14 @@ export function Hero() {
     >
       <img
         src={heroBg}
-        alt=""
-        aria-hidden
+        alt="Dr. Anisa's Holistic Cure — Best homeopathy clinic in Mumbai and Indore offering natural treatments for PCOS, thyroid, diabetes, skin diseases, migraine, arthritis and more"
         className="absolute inset-0 w-full h-full object-cover opacity-40"
         style={{ filter: "grayscale(20%)" }}
       />
+      {/* SEO: Hidden semantic content for search engines */}
+      <h2 className="sr-only">
+        Best Homeopathy Doctor in Mumbai and Indore — Dr. Anisa Shaikh. Treating PCOS, Thyroid Disorders, Diabetes, Eczema, Psoriasis, Acne, Migraine, Arthritis, Spondylitis, Kidney Stones, Depression, Anxiety, Insomnia, Infertility, Asthma, Bronchitis, Allergies, Piles, Fissures, IBS, ADHD, Autism, Hair Fall, Tonsillitis, Hypertension, and Cancer Support at Holistic Cure Homeopathy Clinic Chembur Mumbai and Indore.
+      </h2>
       <div
         className="absolute inset-0"
         style={{

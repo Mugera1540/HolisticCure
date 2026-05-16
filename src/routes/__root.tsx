@@ -74,44 +74,48 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
-      { title: "Dr. Anisa's Holistic Cure — Premium Homeopathy Clinic in Mumbai & Indore" },
+      { title: "Best Homeopathy Doctor in Mumbai & Indore | Dr. Anisa Shaikh — Holistic Cure Clinic" },
       {
         name: "description",
         content:
-          "Experience world-class homeopathic healing at Dr. Anisa's Holistic Cure clinics in Mumbai and Indore. Natural, side-effect-free treatments for chronic diseases, skin disorders, respiratory issues, women's wellness, and mental health.",
+          "Dr. Anisa Shaikh is the best homeopathy doctor in Mumbai (Chembur) & Indore. Holistic Cure clinic offers natural, side-effect-free homeopathic treatments for PCOS, thyroid, diabetes, skin diseases (eczema, psoriasis, acne), migraine, arthritis, depression, anxiety, asthma, kidney stones, infertility, child care & more. Book your appointment today.",
       },
       {
         name: "keywords",
         content:
-          "homeopathy, homeopathy clinic Mumbai, homeopathy Chembur, best homeopath Mumbai, homeopathy clinic Indore, Dr Anisa, Holistic Cure, natural healing, chronic disease treatment, skin disorder homeopathy, women wellness homeopathy, PCOS homeopathy, thyroid homeopathy, pediatric homeopathy",
+          "best homeopathy doctor Mumbai, best homeopathy doctor Indore, Dr Anisa Shaikh homeopathy, best homeopath in Chembur, homeopathy clinic Mumbai, homeopathy clinic Indore, Holistic Cure, PCOS homeopathy treatment Mumbai, thyroid homeopathy Indore, diabetes homeopathy treatment, skin disease homeopathy, eczema treatment homeopathy, psoriasis homeopathy Mumbai, acne homeopathy treatment, migraine homeopathy doctor, arthritis homeopathy Indore, depression anxiety homeopathy, asthma homeopathy treatment Mumbai, kidney stones homeopathy, infertility homeopathy treatment, child care homeopathy, ADHD homeopathy, autism homeopathy treatment, hair fall homeopathy, piles fissure homeopathy, spondylitis homeopathy, IBS homeopathy treatment, insomnia homeopathy, allergy treatment homeopathy, tonsillitis homeopathy, bronchitis homeopathy, women wellness homeopathy, pediatric homeopathy Mumbai, homeopathy near me Mumbai, homeopathy near me Indore, best lady homeopath Mumbai, female homeopathy doctor Indore, natural healing Mumbai, holistic treatment Indore, homeopathic medicine courier India",
       },
-      { name: "author", content: "Dr. Anisa Shaikh" },
-      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
+      { name: "author", content: "Dr. Anisa Shaikh — MD (Homeopathy), BHMS, IACH Greece" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { name: "theme-color", content: "#040f0c" },
       { name: "format-detection", content: "telephone=yes" },
+      { name: "revisit-after", content: "7 days" },
+      { name: "rating", content: "general" },
+      { name: "distribution", content: "global" },
+      { name: "language", content: "English" },
       { name: "geo.region", content: "IN-MH" },
-      { name: "geo.placename", content: "Mumbai" },
+      { name: "geo.placename", content: "Mumbai, Chembur" },
       { name: "geo.position", content: "19.0528;72.8912" },
       { name: "ICBM", content: "19.0528, 72.8912" },
       {
         property: "og:title",
-        content: "Dr. Anisa's Holistic Cure — Best Homeopathy Clinic in Mumbai & Indore",
+        content: "Best Homeopathy Doctor in Mumbai & Indore — Dr. Anisa Shaikh | Holistic Cure",
       },
       {
         property: "og:description",
         content:
-          "Natural healing. Precise science. Lasting wellness. Experience holistic homeopathic care in Mumbai and Indore.",
+          "Dr. Anisa Shaikh offers the best homeopathic treatment for PCOS, thyroid, diabetes, skin diseases, migraine, arthritis, anxiety & more at Holistic Cure clinics in Mumbai (Chembur) and Indore. Natural healing with zero side effects.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://holisticcure.in" },
       { property: "og:locale", content: "en_IN" },
-      { property: "og:site_name", content: "Holistic Cure" },
+      { property: "og:site_name", content: "Dr. Anisa's Holistic Cure — Best Homeopathy Clinic" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Dr. Anisa's Holistic Cure — Best Homeopathy Clinic" },
+      { name: "twitter:title", content: "Best Homeopathy Doctor Mumbai & Indore — Dr. Anisa Shaikh | Holistic Cure" },
       {
         name: "twitter:description",
         content:
-          "Natural healing. Precise science. Lasting wellness. Book a consultation in Mumbai or Indore.",
+          "Top-rated homeopathy clinic by Dr. Anisa Shaikh. Treating PCOS, thyroid, skin diseases, migraine, diabetes & more naturally. Clinics in Mumbai (Chembur) & Indore. Book now.",
       },
     ],
     links: [

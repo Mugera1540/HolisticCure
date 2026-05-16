@@ -165,6 +165,13 @@ export function Services() {
           >
             Treatments <em className="italic opacity-80">We Offer</em>
           </h2>
+          <p className="mt-4 sm:mt-6 text-white/50 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+            Dr. Anisa Shaikh offers expert homeopathic treatment in Mumbai and Indore for PCOS, thyroid, diabetes, eczema, psoriasis, migraine, arthritis, depression, anxiety, asthma, kidney stones, infertility, piles, ADHD, autism, hair fall, and many more chronic conditions.
+          </p>
+          {/* SEO: Comprehensive hidden disease list for search indexing */}
+          <p className="sr-only">
+            Diseases treated at Holistic Cure by Dr. Anisa Shaikh: Polycystic Ovary Syndrome (PCOS), Polycystic Ovarian Disease (PCOD), Hypothyroidism, Hyperthyroidism, Hashimoto's Thyroiditis, Type 2 Diabetes, Diabetic Neuropathy, Eczema, Psoriasis, Acne Vulgaris, Urticaria, Dermatitis, Vitiligo, Migraine, Cluster Headaches, Tension Headaches, Sinusitis, Rheumatoid Arthritis, Osteoarthritis, Cervical Spondylitis, Lumbar Spondylosis, Sciatica, Frozen Shoulder, Ankylosing Spondylitis, Depression, Generalized Anxiety Disorder (GAD), Panic Attacks, OCD, Bipolar Disorder, Insomnia, Sleep Apnea, Bronchial Asthma, Chronic Bronchitis, COPD, Pneumonia, Allergic Rhinitis, Tonsillitis, Adenoids, Kidney Stones, Gallbladder Stones, Renal Colic, Ureteric Calculi, Male Infertility, Female Infertility, Recurrent Miscarriage, Low AMH, Endometriosis, Uterine Fibroids, Irregular Periods, Leucorrhea, Menorrhagia, Dysmenorrhea, Amenorrhea, Menopausal Syndrome, Piles (Hemorrhoids), Anal Fissure, Fistula-in-Ano, Constipation, IBS (Irritable Bowel Syndrome), IBD, GERD, Acid Reflux, Stomach Ulcers, Ulcerative Colitis, Crohn's Disease, ADHD, Autism Spectrum Disorder (ASD), Developmental Delays, Speech Delay, Learning Disorders, Epilepsy, Febrile Seizures, Recurrent Coryza, Childhood Asthma, Alopecia Areata, Hair Fall, Male Pattern Baldness, Dandruff, Scalp Psoriasis, Hypertension, High Blood Pressure, High Cholesterol, Varicose Veins, Cancer Supportive Care, Tumors, Lymphoma, Cysts, Lipoma, Warts, Corns, Fungal Infections, Ringworm, Tinea, Conjunctivitis, Stye, Dry Eyes, Ear Infections, Vertigo, Tinnitus, Bell's Palsy, Trigeminal Neuralgia, Carpal Tunnel Syndrome, Plantar Fasciitis, Heel Pain, Gout, Fibromyalgia, Chronic Fatigue Syndrome. Available in Chembur Mumbai Maharashtra and Indore Madhya Pradesh India.
+          </p>
         </motion.div>
 
         {/* Enhanced Tab Switcher */}

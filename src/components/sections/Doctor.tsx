@@ -73,6 +73,9 @@ export function Doctor() {
             <br />
             <em className="italic opacity-80">Shaikh.</em>
           </h2>
+          <p className="mt-3 text-sm" style={{ color: "var(--color-emerald-main)", fontWeight: 600 }}>
+            Best Homeopathy Doctor in Mumbai &amp; Indore
+          </p>
 
           <p
             className="mt-6 sm:mt-8 max-w-xl"

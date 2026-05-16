@@ -93,8 +93,7 @@ export function Footer() {
             </div>
           </div>
           <p className="mt-6 sm:mt-8 text-white/40 text-sm leading-relaxed max-w-xs">
-            Healing naturally. Healing completely. Providing world-class homeopathic care in Mumbai
-            and Indore.
+            Dr. Anisa Shaikh's Holistic Cure — the best homeopathy clinic in Mumbai (Chembur) and Indore. Natural, side-effect-free healing for PCOS, thyroid, diabetes, skin diseases, migraine, arthritis, depression, asthma, infertility & more.
           </p>
 
           <div className="flex items-center gap-5 mt-8">

@@ -78,9 +78,19 @@ export function About() {
             }}
           >
             Homeopathy is a precise, evidence-based science that triggers the body's innate healing
-            response at the deepest cellular and genetic levels. Dr. Anisa works at Mind-Body-Soul axis—treating the
+            response at the deepest cellular and genetic levels. <strong style={{ color: "var(--color-emerald-main)" }}>Dr. Anisa Shaikh</strong>, the best homeopathy doctor in Mumbai and Indore, works at Mind-Body-Soul axis—treating the
             individual as a holistic whole to achieve permanent balance, immunity, and lasting
             vitality from the root. We believe in celebrating healthier and happier lives through Homeopathy by providing personalized treatment plans tailored to each individual's unique needs.
+          </p>
+          <p
+            className="mt-4 max-w-xl"
+            style={{
+              fontSize: "clamp(13px, 2.2vw, 15px)",
+              lineHeight: 1.8,
+              color: "var(--color-ink-faint)",
+            }}
+          >
+            Visit our clinics in <strong>Chembur, Mumbai</strong> and <strong>Indore</strong> for expert homeopathic treatment of chronic diseases like PCOS, thyroid disorders, diabetes, skin diseases (eczema, psoriasis, acne), migraine, arthritis, depression, anxiety, asthma, kidney stones, infertility, and children's health conditions.
           </p>
 
           <div className="mt-8 sm:mt-10 flex flex-wrap gap-2 sm:gap-3">
