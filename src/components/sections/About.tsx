@@ -78,10 +78,9 @@ export function About() {
             }}
           >
             Homeopathy is a precise, evidence-based science that triggers the body's innate healing
-            response at the deepest cellular and genetic levels. By correcting metabolic blocks and
-            inherent predispositions, Dr. Anisa restores the Mind-Body-Soul axis—treating the
+            response at the deepest cellular and genetic levels. Dr. Anisa works at Mind-Body-Soul axis—treating the
             individual as a holistic whole to achieve permanent balance, immunity, and lasting
-            vitality from the root.
+            vitality from the root. We believe in celebrating healthier and happier lives through Homeopathy by providing personalized treatment plans tailored to each individual's unique needs.
           </p>
 
           <div className="mt-8 sm:mt-10 flex flex-wrap gap-2 sm:gap-3">

@@ -174,7 +174,7 @@ export function Hero() {
         >
           {[
             { icon: "⭐", text: "5.0 Google Rating" },
-            { icon: "🩺", text: "500+ Patients Healed" },
+            { icon: "🩺", text: "900+ Patients Healed" },
             { icon: "📍", text: "Mumbai & Indore" },
           ].map((badge) => (
             <span

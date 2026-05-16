@@ -18,72 +18,110 @@ const data: Record<string, Service[]> = {
       desc: "Restoring endocrine harmony for sustained energy and vitality.",
     },
     {
-      title: "Kidney & Gallbladder Stones",
-      desc: "Natural dissolution support and targeted prevention of recurrence.",
+      title: "Comprehensive Chronic & Acute Care",
+      desc: "Tailored holistic approaches for diverse, stubborn health challenges.",
     },
     {
-      title: "Comprehensive Chronic Care",
-      desc: "Tailored holistic approaches for diverse, stubborn health challenges.",
+      title: "Cancer, Tumors & Lymphoma",
+      desc: "Enhancing the body’s resilience to combat and recover from cancerous conditions.",
     },
   ],
   "Women & Children": [
     {
-      title: "PCOS & Menstrual Health",
-      desc: "Natural regulation of cycles, hormonal balance, and symptom relief.",
+      title: "PCOS (PCOD/PMOS) & Menstrual Health",
+      desc: "Natural regulation of irregular menstrual cycles, hormonal balance, and symptom relief. Relief from symptoms of abnormal white discharge, painful periods, and other menstrual issues.",
     },
     {
-      title: "Infertility Support",
-      desc: "Creating an optimal internal environment to gently support conception.",
+      title: "Infertility Support (Male & Female)",
+      desc: "Creating an optimal internal environment to gently support conception for both, viability, pregnancy, and delivery.",
     },
     {
       title: "General Women's Wellness",
-      desc: "Comprehensive, natural support for female reproductive and intimate health.",
+      desc: "Comprehensive, natural support for female reproductive and intimate health during menarche, teenage, pregnancy, delivery, and menopause.",
     },
     {
-      title: "Pediatric Care & Behavior",
-      desc: "Safe, gentle remedies supporting growing bodies and developing minds.",
+      title: "Child Care & Behavioral Challenges",
+      desc: "Safe, gentle remedies supporting growing bodies and developing minds. Gently treating conditions like recurrent coryza, asthma, tonsillitis, epilepsy, behavioral disorders etc.",
     },
+    {
+      title: "ADHD, ASD, Developmental Delays, Speech & Learning Disorders",
+      desc: "Treating ASD, Autism, and neurodevelopmental disorders in a gentle way.",
+    },
+    {
+      title: "Congenital Diseases & Immunity for Children",
+      desc: "Gentle holistic care for conditions present since birth.",
+    },
+    
   ],
   "Pain & Digestion": [
     {
-      title: "Migraine & Headaches",
+      title: "Migraine, Sinusitis & Headaches",
       desc: "Addressing root triggers for lasting relief and clear-headed vitality.",
     },
     {
-      title: "Joint Pain & Arthritis",
+      title: "Joint Pain, Arthritis & Spondylitis",
       desc: "Reducing inflammation and restoring mobility through natural healing.",
     },
     {
-      title: "Acidity, GERD & IBS",
+      title: "Kidney & Gallbladder Stones",
+      desc: "Natural dissolution support and targeted prevention of recurrence.",
+    },
+    {
+      title: "Piles, Fissures, Fistulas & Constipation",
+      desc: "Gentle, effective regulation and healing of the lower digestive tract.",
+    },
+    {
+      title: "Acidity, GERD, Stomach Ulcers, IBS & IBD",
       desc: "Healing the gut lining and restoring optimal, pain-free digestion.",
     },
     {
-      title: "Piles & Constipation",
-      desc: "Gentle, effective regulation and healing of the lower digestive tract.",
+      title: "Other Painful Conditions & Digestive Issues",
+      desc: "Care for other painful conditions and digestive issues.",
     },
   ],
-  "Mind, Skin & Immunity": [
+  "Mind & Skin": [
     {
-      title: "Sleep Disorders & Insomnia",
-      desc: "Re-establishing natural circadian rhythms for deep, restorative rest.",
+      title: "Sleep Disorders, Sleeplessness or Insomnia",
+      desc: "Re-establishing natural circadian rhythms for deep, restorative rest, thereby improving the quality of sleep.",
     },
     {
       title: "Depression, Anxiety & Stress",
       desc: "Restoring emotional equilibrium and calming an overactive nervous system.",
     },
     {
-      title: "Skin Diseases",
-      desc: "Healing from within to address eczema, psoriasis, acne, and rashes.",
+      title: "Mood Disorders",
+      desc: "Treating mood swings, bipolar disorder, emotional imbalances and improving general well-being.",
     },
     {
-      title: "Allergies & Sensitivities",
+      title: "Skin Diseases",
+      desc: "Healing from within to address ECZEMA, PSORIASIS, ACNE, and RASHES.",
+    },
+    {
+      title: "Skin Allergies & Sensitivities",
       desc: "Strengthening the body's natural defenses without reliance on medications.",
+    },
+  ], 
+  
+  "Immunity & Respiratory": [
+    
+    {
+      title: "Allergies & Sensitivities",
+      desc: "Strengthening the body's natural defenses without reliance on medications. Treats Allergic rhinitis (Allergic Cold).",
     },
     {
       title: "Tonsillitis & Sinusitis",
       desc: "Building resilience against acute and chronic respiratory infections.",
     },
+     {
+      title: "Lower Respiratory Infections",
+      desc: "Effective treatment for bronchitis, bronchiolitis, pneumonia, COPD, asthma, and other respiratory infections.",
+    },
+    {
+      title: "Strengthening Immunity",
+      desc: "Optimizing the body's natural defenses to enhance resilience against infections and health challenges.",
+    },
   ],
+
 };
 
 const tabs = Object.keys(data);
@@ -111,7 +149,7 @@ export function Services() {
           className="text-center max-w-3xl mx-auto"
         >
           <p
-            className="mb-4 sm:mb-6 text-emerald-glow"
+            className="mb-4 sm:mb-6 text-emerald-glow font-bold"
             style={{
               fontSize: "11px",
               letterSpacing: "0.3em",
@@ -122,17 +160,17 @@ export function Services() {
             — Our Practice
           </p>
           <h2
-            className="font-serif text-white leading-[1.05]"
+            className="font-serif text-white leading-[1.05] font-bold"
             style={{ fontSize: "clamp(32px, 6vw, 84px)" }}
           >
-            Treatments <em className="italic font-light opacity-80">We Offer</em>
+            Treatments <em className="italic opacity-80">We Offer</em>
           </h2>
         </motion.div>
 
         {/* Enhanced Tab Switcher */}
         <div className="mt-12 sm:mt-20 flex justify-center">
           <div className="inline-flex items-center p-1.5 sm:p-2 glass-dark rounded-2xl sm:rounded-full overflow-x-auto scrollbar-none max-w-full">
-            <div className="grid grid-cols-2 sm:flex sm:items-center gap-1 sm:gap-2 min-w-max">
+            <div className="grid grid-cols-2 sm:flex sm:items-center gap-1 sm:gap-1.5 min-w-max">
               {tabs.map((t, i) => {
                 const isActive = active === t;
                 return (
@@ -140,7 +178,7 @@ export function Services() {
                     key={t}
                     onClick={() => setActive(t)}
                     aria-pressed={isActive}
-                    className="relative px-4 sm:px-10 py-3.5 sm:py-4 rounded-xl sm:rounded-full transition-all duration-300 flex items-center justify-center sm:justify-start gap-2 sm:gap-3 group outline-none cursor-pointer min-h-[48px]"
+                    className="relative px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl sm:rounded-full transition-all duration-300 flex items-center justify-center sm:justify-start gap-2 sm:gap-2 group outline-none cursor-pointer min-h-[48px]"
                   >
                     {isActive && (
                       <motion.div
@@ -148,16 +186,16 @@ export function Services() {
                         className="absolute inset-0 rounded-xl sm:rounded-full shadow-lg"
                         transition={{ type: "spring", bounce: 0.15, duration: 0.6 }}
                         style={{
-                          background: "var(--color-emerald-glow)",
+                          background: "#ffffff",
                           border: "1px solid rgba(255,255,255,0.2)",
                         }}
                       />
                     )}
 
                     <span
-                      className="relative z-10 font-mono text-[10px] sm:text-[11px] transition-colors"
+                      className="relative z-10 font-mono text-[11px] sm:text-[12px] transition-colors font-bold"
                       style={{
-                        opacity: isActive ? 1 : 0.6,
+                        opacity: isActive ? 1 : 0.8,
                         color: isActive ? "var(--color-emerald-deep)" : "white",
                       }}
                     >
@@ -165,12 +203,12 @@ export function Services() {
                     </span>
 
                     <span
-                      className="relative z-10 whitespace-nowrap font-semibold transition-colors"
+                      className="relative z-10 whitespace-nowrap font-bold transition-colors"
                       style={{
-                        fontSize: "11px",
+                        fontSize: "13px",
                         letterSpacing: "0.18em",
                         textTransform: "uppercase",
-                        color: isActive ? "var(--color-emerald-deep)" : "rgba(255,255,255,0.7)",
+                        color: isActive ? "var(--color-emerald-deep)" : "white",
                       }}
                     >
                       {t}
@@ -209,19 +247,8 @@ export function Services() {
                       style={{ background: "var(--color-emerald-glow)" }}
                     />
                   </div>
-                  <h3 className="font-serif text-xl sm:text-2xl text-white">{s.title}</h3>
-                  <p className="mt-2 sm:mt-3 text-white/60 text-sm leading-relaxed">{s.desc}</p>
-                  <div
-                    className="mt-6 sm:mt-8 flex items-center gap-2 transition-transform group-hover:translate-x-1"
-                    style={{
-                      fontSize: "10px",
-                      letterSpacing: "0.24em",
-                      textTransform: "uppercase",
-                      color: "var(--color-emerald-glow)",
-                    }}
-                  >
-                    Explore <span>→</span>
-                  </div>
+                  <h3 className="font-serif text-xl sm:text-2xl text-white font-bold">{s.title}</h3>
+                  <p className="mt-2 sm:mt-3 text-white/80 text-sm leading-relaxed font-bold">{s.desc}</p>
                 </motion.article>
               ))}
             </motion.div>

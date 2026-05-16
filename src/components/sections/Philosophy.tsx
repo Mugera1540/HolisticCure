@@ -67,7 +67,7 @@ export function Philosophy() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center max-w-4xl mx-auto px-4"
+          className="text-center max-w-6xl mx-auto px-4"
         >
           <h2
             className="font-serif font-light text-white leading-[1.05]"
@@ -83,7 +83,7 @@ export function Philosophy() {
             with personalized attention &amp; consultation with the highest quality medicines.
           </p>
 
-          <div className="mt-10 sm:mt-16 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <div className="mt-10 sm:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               {
                 title: "The Globule",
@@ -93,8 +93,17 @@ export function Philosophy() {
                 title: "Dynamic Healing",
                 body: "We focus on the 'Vital Force'—addressing the root energetic imbalance rather than just suppressing symptoms.",
               },
+              {
+                title: "Rapid Results",
+                body: "Homeopathy can produce remarkably fast results—breaking the myth that it works slowly. Speed depends on factors like vitality and chronicity; while chronic cases take time, acute conditions often respond within minutes.",
+              },
+              
+              {
+                title: "Avoid Surgery",
+                body: "Many conditions often requiring surgery—such as stones, tonsillitis, spine-surgery and cysts—can be effectively treated with homeopathy by addressing the root cause and stimulating natural recovery.",
+              },
             ].map((c) => (
-              <div key={c.title} className="glass-dark rounded-sm p-6 sm:p-8 text-left shadow-2xl">
+              <div key={c.title} className="glass-dark rounded-sm p-6 sm:p-8 text-left shadow-2xl flex flex-col h-full">
                 <h3 className="font-serif italic text-2xl sm:text-3xl text-white">{c.title}</h3>
                 <p className="mt-3 sm:mt-4 text-white/60 text-sm sm:text-base leading-relaxed">
                   {c.body}

@@ -83,11 +83,11 @@ export function Navigation() {
           className="container-luxe flex items-center justify-between py-3 sm:py-4"
         >
           <a href="/#hero" className="flex items-center gap-5 group">
-            <div className="relative w-20 sm:w-28 h-12 sm:h-14 flex items-center justify-center">
+            <div className="relative w-30 sm:w-36 h-12 sm:h-14 flex items-center justify-center">
               <img
                 src={logo}
                 alt="Holistic Cure Logo"
-                className="h-28 sm:h-44 w-auto object-contain absolute top-1/2 -translate-y-1/2 transition-transform duration-500 group-hover:scale-105"
+                className="h-36 sm:h-60 w-auto object-contain absolute top-1/2 -translate-y-1/2 transition-transform duration-500 group-hover:scale-105"
               />
             </div>
             <div className="flex flex-col leading-none">
@@ -111,7 +111,7 @@ export function Navigation() {
               <a
                 key={l.href}
                 href={l.href}
-                className="story-link text-white/70 hover:text-white transition-colors"
+                className="story-link text-white transition-colors"
                 style={{ fontSize: "11px", letterSpacing: "0.18em", textTransform: "uppercase" }}
               >
                 {l.label}
