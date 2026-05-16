@@ -21,8 +21,18 @@ const reviews = [
   },
   {
     quote:
+      "Dr. Anisa is incredible. Not only has she taken great care of my health, but she is also lovely to speak with at every appointment. It's rare to find a doctor who combines such personal touches and genuine care for a patient as a person with outstanding medical expertise. I had a nerve compression problem and was advised to undergo surgery by a spine surgeon. However, after showing my reports to Dr. Anisa, she successfully cured my condition without any surgery. I am very happy and highly recommend her!",
+    name: "Sunita Bhelarao",
+  },
+  {
+    quote:
       "Just had my first session with Dr. Anisa. For the first time ever I felt like my issue was fully addressed. Dr. Anisa asked me many questions to understand the root cause of my problem. No other doctor has tried to understand my problem this way. I've been experiencing back since 9 years now, been to more than 20-30 doctors during this time, not once did I feel satisfied with the doctors. Only if there was an option to give 100 stars!",
     name: "Akhila Vishnu",
+  },
+  {
+    quote:
+      "Excellent Doctor! Dr. Anisa is very humble and polite. Initially, we visited her clinic for my mother's acidity and stomach-related problems. My mom had been suffering for the last 10–12 years. Many lakhs of rupees were spent in big hospitals such as Jaslok Hospital, Bombay Hospital, and Sushrut Hospital, but there was no permanent relief from such big hospitals. After taking homeopathy pills and medicines from Dr. Anisa, my mom got complete relief. She cured my mom in a short period. My mom is feeling very well now. It's really AMAZING..! Of course, our family was impressed by this treatment, the doctor's knowledge, expertise, and professionalism throughout my mom's treatment, and then started homeopathy treatment for all family members—my sister, my father, and myself too. It would not be an exaggeration to say that she is a magic doctor who has magic in her hands to heal patients quickly. Dr. Anisa ma'am has now become our family doctor! She has been a real problem solver and helped us a lot. There is so much power in her counseling that depression is reduced tremendously and the patient becomes energetic and positive. She is understanding, talented, and the best homeopathy doctor in Mumbai. Highly recommended for any health-related problems.",
+    name: "ADV. ABHIJIT MILIND TOPKAR",
   },
   {
     quote:

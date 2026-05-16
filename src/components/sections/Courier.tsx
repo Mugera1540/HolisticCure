@@ -153,9 +153,9 @@ export function Courier() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-3 text-[var(--color-berry)] mb-6 drop-shadow-lg">
+            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-[var(--color-berry)]/10 border border-[var(--color-berry)]/20 text-white mb-8 drop-shadow-lg backdrop-blur-sm">
               <TruckIcon />
-              <span className="uppercase tracking-[0.4em] text-[10px] font-bold">
+              <span className="uppercase tracking-[0.5em] text-[11px] font-bold">
                 Courier Service
               </span>
             </div>
@@ -166,7 +166,7 @@ export function Courier() {
               Medicine <em className="italic font-light opacity-80">Dispatch</em>
             </h1>
             <p className="text-white/80 max-w-xl mx-auto text-sm sm:text-base leading-relaxed font-medium">
-              For our existing patients, we offer doorstep delivery of prescribed medicines. Fill in
+              We offer doorstep delivery of prescribed medicines. Fill in
               your details below and we'll calculate the shipping for you.
             </p>
           </motion.div>

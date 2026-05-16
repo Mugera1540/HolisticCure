@@ -100,7 +100,7 @@ export function Philosophy() {
               
               {
                 title: "Avoid Surgery",
-                body: "Many conditions often requiring surgery—such as stones, tonsillitis, spine-surgery and cysts—can be effectively treated with homeopathy by addressing the root cause and stimulating natural recovery.",
+                body: "Many conditions often requiring surgery—such as stones, tonsillitis and cysts—can be effectively treated with homeopathy by addressing the root cause and stimulating natural recovery. Cases of Knee replacement & Spinal surgeries can be prevented depending on severity.",
               },
             ].map((c) => (
               <div key={c.title} className="glass-dark rounded-sm p-6 sm:p-8 text-left shadow-2xl flex flex-col h-full">

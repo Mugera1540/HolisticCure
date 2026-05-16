@@ -202,11 +202,11 @@ export function Booking() {
               Appointment.
             </em>
           </h2>
-          <p className="mt-4 text-white/40 uppercase tracking-[0.4em] text-[10px] sm:text-[11px] font-bold">
+          <p className="mt-4 text-white uppercase tracking-[0.4em] text-[12px] sm:text-[14px] font-bold">
             Online or In-Person
           </p>
           <p
-            className="mt-6 sm:mt-8 text-white/60 max-w-xl mx-auto text-sm sm:text-base"
+            className="mt-6 sm:mt-8 text-white/100 max-w-xl mx-auto text-sm sm:text-base"
             style={{ lineHeight: 1.7 }}
           >
             Share a few details and Dr. Anisa's team will confirm your consultation within hours —
@@ -230,7 +230,7 @@ export function Booking() {
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               className={fieldBase}
-              placeholder="Anisa Shaikh"
+              placeholder=""
               maxLength={80}
               aria-invalid={!!errors.name}
             />
@@ -248,7 +248,7 @@ export function Booking() {
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
               className={fieldBase}
-              placeholder="+91 98765 43210"
+              placeholder=""
               maxLength={20}
               aria-invalid={!!errors.phone}
             />

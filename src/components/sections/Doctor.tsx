@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import drImg from "../../assets/Doctor.jpg";
 
 const credentials = [
+  "M D (Homeopathy)",
   "BHMS Graduate",
   "IACH Greece Diploma",
+  "HHF Mumbai",
   "Certified Graphologist",
   "Mind-Body-Soul Specialist",
 ];
@@ -81,12 +83,14 @@ export function Doctor() {
             }}
           >
             Dr. Anisa is a passionate Homeopath trained under some of the most affluent and
-            experienced Homeopaths worldwide. Holding a Diploma from the{" "}
+            experienced Homeopaths worldwide. Along with her
+            <strong style={{ color: "var(--color-emerald-main)" }}> M.D.(Hom.) from Maharshtra University </strong>, she holds a Diploma from the{" "}
             <strong style={{ color: "var(--color-emerald-main)" }}>
-              International Academy of Classical Homeopathy in Greece
+              International Academy of Classical Homeopathy (IACH) in Greece 
             </strong>
-            , she firmly believes Homeopathy is the best method of treatment as it works on the
-            Mind-Body-Soul axis &amp; cures the disease from the root.
+            , as well as Advanced diploma in 
+            <strong style={{ color: "var(--color-emerald-main)" }}> Master's course in applicable Homeopathy (M.C.A.H.)</strong> from Hahnemannian Homeopathy Forum (HHF) Mumbai. she firmly believes Homeopathy is the best method of treatment as it works on the
+            Mind-Body-Soul axis &amp; cures the disease from its root which inturn helps in improving the overall health as well as "Quality Of Life".
           </p>
 
           <div className="mt-8 sm:mt-10 grid grid-cols-2 gap-2 sm:gap-3 max-w-md">
